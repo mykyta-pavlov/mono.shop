@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="SQLite - skinet.db">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.20">
+    <root id="1">
+      <ServerVersion>3.31.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="DeliveryMethods"/>
+    <table id="7" parent="2" name="OrderItems"/>
+    <table id="8" parent="2" name="Orders"/>
+    <table id="9" parent="2" name="ProductBrands"/>
+    <table id="10" parent="2" name="ProductTypes"/>
+    <table id="11" parent="2" name="Products"/>
+    <table id="12" parent="2" name="__EFMigrationsHistory"/>
+    <table id="13" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="14" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="15" parent="6" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="16" parent="6" name="ShortName">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="17" parent="6" name="DeliveryTime">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="18" parent="6" name="Description">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="19" parent="6" name="Price">
+      <Position>5</Position>
+      <DataType>decimal(18,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="20" parent="6" name="PK_DeliveryMethods">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="7" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="22" parent="7" name="ItemOrdered_ProductItemId">
+      <Position>2</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="23" parent="7" name="ItemOrdered_ProductName">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="24" parent="7" name="ItemOrdered_PictureUrl">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="25" parent="7" name="Price">
+      <Position>5</Position>
+      <DataType>decimal(18,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="7" name="Quantity">
+      <Position>6</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="7" name="OrderId">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <index id="28" parent="7" name="IX_OrderItems_OrderId">
+      <ColNames>OrderId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="29" parent="7" name="PK_OrderItems">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="7" name="FK_OrderItems_Orders_OrderId">
+      <ColNames>OrderId</ColNames>
+      <RefTableName>Orders</RefTableName>
+      <RefKeyName>PK_Orders</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="31" parent="8" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="32" parent="8" name="BuyerEmail">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="33" parent="8" name="OrderDate">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="8" name="ShipToAddress_FirstName">
+      <Position>4</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="35" parent="8" name="ShipToAddress_LastName">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="36" parent="8" name="ShipToAddress_Street">
+      <Position>6</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="37" parent="8" name="ShipToAddress_City">
+      <Position>7</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="38" parent="8" name="ShipToAddress_State">
+      <Position>8</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="39" parent="8" name="ShipToAddress_Zipcode">
+      <Position>9</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <column id="40" parent="8" name="DeliveryMethodId">
+      <Position>10</Position>
+      <DataType>INTEGER|0s</DataType>
+    </column>
+    <column id="41" parent="8" name="Subtotal">
+      <Position>11</Position>
+      <DataType>REAL|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="8" name="Status">
+      <Position>12</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="8" name="PaymentIntentId">
+      <Position>13</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <index id="44" parent="8" name="IX_Orders_DeliveryMethodId">
+      <ColNames>DeliveryMethodId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="45" parent="8" name="PK_Orders">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="8" name="FK_Orders_DeliveryMethods_DeliveryMethodId">
+      <ColNames>DeliveryMethodId</ColNames>
+      <RefTableName>DeliveryMethods</RefTableName>
+      <RefKeyName>PK_DeliveryMethods</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="47" parent="9" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="48" parent="9" name="Name">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="49" parent="9" name="PK_ProductBrands">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="10" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="51" parent="10" name="Name">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+    </column>
+    <key id="52" parent="10" name="PK_ProductTypes">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="11" name="Id">
+      <Position>1</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="54" parent="11" name="Name">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="11" name="Description">
+      <Position>3</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="11" name="Price">
+      <Position>4</Position>
+      <DataType>decimal(18,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="11" name="PictureUrl">
+      <Position>5</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="11" name="ProductTypeId">
+      <Position>6</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="11" name="ProductBrandId">
+      <Position>7</Position>
+      <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="60" parent="11" name="IX_Products_ProductTypeId">
+      <ColNames>ProductTypeId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="61" parent="11" name="IX_Products_ProductBrandId">
+      <ColNames>ProductBrandId</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="62" parent="11" name="PK_Products">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="63" parent="11" name="FK_Products_ProductTypes_ProductTypeId">
+      <ColNames>ProductTypeId</ColNames>
+      <RefTableName>ProductTypes</RefTableName>
+      <RefKeyName>PK_ProductTypes</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="64" parent="11" name="FK_Products_ProductBrands_ProductBrandId">
+      <ColNames>ProductBrandId</ColNames>
+      <RefTableName>ProductBrands</RefTableName>
+      <RefKeyName>PK_ProductBrands</RefKeyName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="65" parent="12" name="MigrationId">
+      <Position>1</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="12" name="ProductVersion">
+      <Position>2</Position>
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="67" parent="12" name="sqlite_autoindex___EFMigrationsHistory_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MigrationId</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="12" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
+    </key>
+    <column id="69" parent="13" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="70" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="71" parent="13" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="72" parent="13" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="73" parent="13" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="74" parent="14" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="75" parent="14" name="seq">
+      <Position>2</Position>
+    </column>
+  </database-model>
+</dataSource>
