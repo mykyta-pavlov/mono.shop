@@ -66,8 +66,6 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="skinet.db" t="Include" />
-        <e p="skinet.db-shm" t="Include" />
-        <e p="skinet.db-wal" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
@@ -154,15 +152,12 @@
           </e>
           <e p="GenericRepository.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="20201005164527_InitialCreate.cs" t="Include" />
-            <e p="20201005164527_InitialCreate.Designer.cs" t="Include" />
-            <e p="20201110150915_OrderEntityAdded.cs" t="Include" />
-            <e p="20201110150915_OrderEntityAdded.Designer.cs" t="Include" />
+            <e p="20210109102157_RemoveBrands.cs" t="Include" />
+            <e p="20210109102157_RemoveBrands.Designer.cs" t="Include" />
             <e p="StoreContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="ProductRepository.cs" t="Include" />
           <e p="SeedData" t="Include">
-            <e p="brands.json" t="Include" />
             <e p="delivery.json" t="Include" />
             <e p="products.json" t="Include" />
             <e p="types.json" t="Include" />

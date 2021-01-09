@@ -8,30 +8,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b98fbb-1fc2-4e4a-9616-3d213e45904c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.vs/capriza.shop/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/capriza.shop/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/ProductsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Helpers/MappingProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Helpers/MappingProfiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/obj/API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/API.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/110d0d46-b543-4cc5-a943-b871296852c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/110d0d46-b543-4cc5-a943-b871296852c5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Dtos/ProductToReturnDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Dtos/ProductToReturnDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/ProductBrand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Interfaces/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Interfaces/IProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Specifications/ProductWithFilterForCountSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Specifications/ProductWithFilterForCountSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Specifications/ProductsWithTypesAndBrandsSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Specifications/ProductsWithTypesSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db" beforeDir="false" afterPath="$PROJECT_DIR$/API/skinet.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Config/ProductConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Config/ProductConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/ProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/StoreContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/StoreContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/StoreContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/StoreContextSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201005164527_InitialCreate.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201005164527_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/shop/shop.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shop/shop.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +66,7 @@
       <option value="$PROJECT_DIR$/Infrastructure/Data/Config/ProductConfiguration.cs" />
       <option value="$PROJECT_DIR$/API/Controllers/ProductsController.cs" />
       <option value="$PROJECT_DIR$/API/Helpers/MappingProfiles.cs" />
+      <option value="$PROJECT_DIR$/API/Dtos/ProductToReturnDto.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lhospqxl4DoYVeL44n2uvmLIo5" />
@@ -114,7 +127,8 @@
       <updated>1608058898985</updated>
       <workItem from="1608058915748" duration="884000" />
       <workItem from="1609777341575" duration="423000" />
-      <workItem from="1610036620458" duration="6937000" />
+      <workItem from="1610036620458" duration="11658000" />
+      <workItem from="1610186228077" duration="6798000" />
     </task>
     <servers />
   </component>
