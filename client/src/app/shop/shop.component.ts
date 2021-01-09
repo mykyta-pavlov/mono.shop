@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { IProduct } from '../shared/models/product';
-import { IBrand } from '../shared/models/brand';
 import { IType } from '../shared/models/productType';
 import { ShopService } from './shop.service';
 import { ShopParams } from '../shared/models/shopParams';
@@ -13,7 +12,6 @@ import { ShopParams } from '../shared/models/shopParams';
 export class ShopComponent implements OnInit {
   @ViewChild('search', {static: false}) searchTerm: ElementRef;
   products: IProduct[];
-  brands: IBrand[];
   types: IType[];
   shopParams = new ShopParams();
   totalCount: number;
@@ -27,7 +25,6 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    this.getBrands();
     this.getTypes();
   }
 
@@ -37,14 +34,6 @@ export class ShopComponent implements OnInit {
       this.shopParams.pageNumber = response.pageIndex;
       this.shopParams.pageSize = response.pageSize;
       this.totalCount = response.count;
-    }, error => {
-      console.log(error);
-    });
-  }
-
-  getBrands(): void {
-    this.shopService.getBrands().subscribe(response => {
-      this.brands = [{id: 0, name: 'All'}, ...response];
     }, error => {
       console.log(error);
     });

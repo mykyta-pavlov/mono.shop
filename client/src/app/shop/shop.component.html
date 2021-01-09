@@ -2,7 +2,7 @@
     <div class="row">
 
         <section class="col-3">
-            <ng-container *ngIf="types && brands">                
+            <ng-container *ngIf="types">
                 <h5 class="text-warning ml-3 mt-4 mb-3">Sort</h5>
                 <select class="custom-select mb-4" style="cursor: pointer;" (change)="onSortSelected($event.target.value)">
                     <option *ngFor="let sort of sortOptions"
@@ -11,18 +11,7 @@
                         {{sort.name}}
                     </option>
                 </select>
-    
-                <h5 class="text-warning ml-3">Brands</h5>
-                <ul class="list-group my-3" style="cursor: pointer;">
-                    <li class="list-group-item"                    
-                        *ngFor="let brand of brands"
-                        [class.active]="brand.id === this.shopParams.brandId"
-                        [value]="brand.id"
-                        (click)="onBrandSelected(brand.id)"
-                    >
-                        {{brand.name}}
-                    </li>
-                  </ul>
+
                   <h5 class="text-warning ml-3">Types</h5>
                   <ul class="list-group my-3" style="cursor: pointer;">
                     <li class="list-group-item"
