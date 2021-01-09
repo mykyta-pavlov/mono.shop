@@ -50,6 +50,7 @@
           <e p="Pagination.cs" t="Include" />
           <e p="ProductUrlResolver.cs" t="Include" />
         </e>
+        <e p="identity.db" t="Include" />
         <e p="Middleware" t="Include">
           <e p="ExceptionMiddleware.cs" t="Include" />
         </e>
@@ -64,6 +65,7 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="skinet.db" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
@@ -112,7 +114,6 @@
             <e p="ProductItemOrdered.cs" t="Include" />
           </e>
           <e p="Product.cs" t="Include" />
-          <e p="ProductBrand.cs" t="Include" />
           <e p="ProductType.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
@@ -135,7 +136,7 @@
           <e p="ISpecification.cs" t="Include" />
           <e p="OrdersWithItemsAndOrderingSpecification.cs" t="Include" />
           <e p="ProductSpecParams.cs" t="Include" />
-          <e p="ProductsWithTypesAndBrandsSpecification.cs" t="Include" />
+          <e p="ProductsWithTypesSpecification.cs" t="Include" />
           <e p="ProductWithFilterForCountSpecification.cs" t="Include" />
         </e>
       </e>
@@ -151,15 +152,12 @@
           </e>
           <e p="GenericRepository.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="20201005164527_InitialCreate.cs" t="Include" />
-            <e p="20201005164527_InitialCreate.Designer.cs" t="Include" />
-            <e p="20201110150915_OrderEntityAdded.cs" t="Include" />
-            <e p="20201110150915_OrderEntityAdded.Designer.cs" t="Include" />
+            <e p="20210109102157_RemoveBrands.cs" t="Include" />
+            <e p="20210109102157_RemoveBrands.Designer.cs" t="Include" />
             <e p="StoreContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="ProductRepository.cs" t="Include" />
           <e p="SeedData" t="Include">
-            <e p="brands.json" t="Include" />
             <e p="delivery.json" t="Include" />
             <e p="products.json" t="Include" />
             <e p="types.json" t="Include" />

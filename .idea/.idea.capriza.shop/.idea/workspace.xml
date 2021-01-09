@@ -8,158 +8,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b98fbb-1fc2-4e4a-9616-3d213e45904c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/110d0d46-b543-4cc5-a943-b871296852c5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/67d7434b-5f45-482d-ab68-29e4fb7fccf9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vs/capriza.shop/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/AutoMapper.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Data.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/SQLitePCLRaw.core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.dynamic_cdecl.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/StackExchange.Redis.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Text.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/System.Threading.Channels.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/alpine-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-arm/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-arm64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-armel/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/linux-x86/native/libe_sqlite3.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/libe_sqlite3.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/identity.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/API.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/staticwebassets/API.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/staticwebassets/API.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/skinet.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/obj/Infrastructure.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/capriza.shop/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/capriza.shop/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Helpers/MappingProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Helpers/MappingProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/110d0d46-b543-4cc5-a943-b871296852c5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/dataSources/110d0d46-b543-4cc5-a943-b871296852c5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.capriza.shop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Dtos/ProductToReturnDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Dtos/ProductToReturnDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/bin/Debug/netcoreapp3.1/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/ProductBrand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Interfaces/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Interfaces/IProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Specifications/ProductWithFilterForCountSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Specifications/ProductWithFilterForCountSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Specifications/ProductsWithTypesAndBrandsSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Specifications/ProductsWithTypesSpecification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/API/obj/Debug/netcoreapp3.1/API.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db" beforeDir="false" afterPath="$PROJECT_DIR$/API/skinet.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/skinet.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Core/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Config/ProductConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Config/ProductConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/netstandard2.1/Core.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201005164527_InitialCreate.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201005164527_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20210109102157_RemoveBrands.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20210109102157_RemoveBrands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/20201110150915_OrderEntityAdded.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/Migrations/StoreContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/SeedData/brands.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Core.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/bin/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/basket/basket.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/basket/basket.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/models/basket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/models/basket.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/models/brand.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/models/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/models/product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/obj/Debug/netstandard2.1/Infrastructure.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/shop/shop.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shop/shop.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shop/shop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shop/shop.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shop/shop.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shop/shop.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +128,7 @@
       <workItem from="1608058915748" duration="884000" />
       <workItem from="1609777341575" duration="423000" />
       <workItem from="1610036620458" duration="11658000" />
-      <workItem from="1610186228077" duration="7181000" />
+      <workItem from="1610186228077" duration="6798000" />
     </task>
     <servers />
   </component>

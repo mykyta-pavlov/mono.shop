@@ -18,16 +18,13 @@ namespace API.Controllers
     public class ProductsController : BaseApiController
     {
         private readonly IGenericRepository<Product> _productsRepo;
-        private readonly IGenericRepository<ProductBrand> _productBrandRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
         private readonly IMapper _mapper;
-        public ProductsController(IGenericRepository<Product> productsRepo,
-        IGenericRepository<ProductBrand> productBrandRepo, IGenericRepository<ProductType> productTypeRepo,
+        public ProductsController(IGenericRepository<Product> productsRepo, IGenericRepository<ProductType> productTypeRepo,
         IMapper mapper)
         {
             _mapper = mapper;
             _productTypeRepo = productTypeRepo;
-            _productBrandRepo = productBrandRepo;
             _productsRepo = productsRepo;
         }
 
@@ -35,7 +32,7 @@ namespace API.Controllers
     public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
         [FromQuery]ProductSpecParams productParams)
     {
-        var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
+        var spec = new ProductsWithTypesSpecification(productParams);
 
         var countSpec = new ProductWithFilterForCountSpecification(productParams);
 
@@ -54,7 +51,7 @@ namespace API.Controllers
     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
     {
-        var spec = new ProductsWithTypesAndBrandsSpecification(id);
+        var spec = new ProductsWithTypesSpecification(id);
 
         var product = await _productsRepo.GetEntityWithSpec(spec);
 
@@ -63,12 +60,6 @@ namespace API.Controllers
         return _mapper.Map<Product, ProductToReturnDto>(product);
     }
 
-
-    [HttpGet("brands")]
-    public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands(int id)
-    {
-        return Ok(await _productBrandRepo.ListAllAsync());
-    }
 
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes(int id)

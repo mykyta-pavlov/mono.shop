@@ -1,6 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IBrand } from '../shared/models/brand';
 import { IPagination } from '../shared/models/pagination';
 import { IType } from '../shared/models/productType';
 import { map } from 'rxjs/operators';
@@ -47,10 +46,6 @@ export class ShopService {
 
   getProduct(id: number): Observable<IProduct> {
     return this.http.get<IProduct>(this.baseUrl + 'products/' + id);
-  }
-
-  getBrands(): Observable<IBrand[]> {
-    return this.http.get<IBrand[]>(this.baseUrl + 'products/brands');
   }
 
   getTypes(): Observable<IType[]> {
