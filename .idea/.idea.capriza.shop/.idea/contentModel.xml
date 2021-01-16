@@ -152,8 +152,8 @@
           </e>
           <e p="GenericRepository.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="20210109102157_RemoveBrands.cs" t="Include" />
-            <e p="20210109102157_RemoveBrands.Designer.cs" t="Include" />
+            <e p="20210114161842_AddSizesQuantity.cs" t="Include" />
+            <e p="20210114161842_AddSizesQuantity.Designer.cs" t="Include" />
             <e p="StoreContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="ProductRepository.cs" t="Include" />

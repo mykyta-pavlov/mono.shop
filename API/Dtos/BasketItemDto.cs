@@ -20,7 +20,8 @@ namespace API.Dtos
 
         [Required]
         public string PictureUrl { get; set; }
-
+        
+        //TODO: Remove brand property
         [Required]
         public string Brand { get; set; }
 

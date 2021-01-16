@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Data.Migrations
 {
-    public partial class RemoveBrands : Migration
+    public partial class AddSizesQuantity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -75,7 +75,14 @@ namespace Infrastructure.Data.Migrations
                     Description = table.Column<string>(maxLength: 180, nullable: false),
                     Price = table.Column<double>(type: "decimal(18,2)", nullable: false),
                     PictureUrl = table.Column<string>(nullable: false),
-                    ProductTypeId = table.Column<int>(nullable: false)
+                    ProductTypeId = table.Column<int>(nullable: false),
+                    SizeQuantityXxs = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityXs = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityS = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityM = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityL = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityXl = table.Column<int>(type: "integer", nullable: false),
+                    SizeQuantityXxl = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

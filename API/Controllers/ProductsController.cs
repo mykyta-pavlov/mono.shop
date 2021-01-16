@@ -28,43 +28,43 @@ namespace API.Controllers
             _productsRepo = productsRepo;
         }
 
-    [HttpGet]
-    public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
-        [FromQuery]ProductSpecParams productParams)
-    {
-        var spec = new ProductsWithTypesSpecification(productParams);
+        [HttpGet]
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
+            [FromQuery]ProductSpecParams productParams)
+        {
+            var spec = new ProductsWithTypesSpecification(productParams);
 
-        var countSpec = new ProductWithFilterForCountSpecification(productParams);
+            var countSpec = new ProductWithFilterForCountSpecification(productParams);
 
-        var totalItems = await _productsRepo.CountAsync(countSpec);
+            var totalItems = await _productsRepo.CountAsync(countSpec);
 
-        var products = await _productsRepo.ListAsync(spec);
+            var products = await _productsRepo.ListAsync(spec);
 
-        var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products); 
+            var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products); 
 
-        return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, 
-            totalItems, data));
+            return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, 
+                totalItems, data));
+        }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
+        {
+            var spec = new ProductsWithTypesSpecification(id);
+
+            var product = await _productsRepo.GetEntityWithSpec(spec);
+
+            if (product == null) return NotFound(new ApiResponse(404));
+
+            return _mapper.Map<Product, ProductToReturnDto>(product);
+        }
+
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes(int id)
+        {
+            return Ok(await _productTypeRepo.ListAllAsync());
+        }
     }
-
-    [HttpGet("{id}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
-    {
-        var spec = new ProductsWithTypesSpecification(id);
-
-        var product = await _productsRepo.GetEntityWithSpec(spec);
-
-        if (product == null) return NotFound(new ApiResponse(404));
-
-        return _mapper.Map<Product, ProductToReturnDto>(product);
-    }
-
-
-    [HttpGet("types")]
-    public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes(int id)
-    {
-        return Ok(await _productTypeRepo.ListAllAsync());
-    }
-}
 }

@@ -8,5 +8,12 @@ namespace Core.Entities
         public string PictureUrl { get; set; }
         public ProductType ProductType { get; set; }
         public int ProductTypeId { get; set; }
+        public int SizeQuantityXxs { get; set; }
+        public int SizeQuantityXs { get; set; }
+        public int SizeQuantityS { get; set; }
+        public int SizeQuantityM { get; set; }
+        public int SizeQuantityL { get; set; }
+        public int SizeQuantityXl { get; set; }
+        public int SizeQuantityXxl { get; set; }
     }
 }

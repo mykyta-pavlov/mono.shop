@@ -10,6 +10,7 @@ namespace Core.Specifications
             get => _pageSize;
             set => _pageSize = (value > MaxPageSize) ? MaxPageSize : value;
         }
+        //TODO: Remove brand property
         public int? BrandId { get; set; }
         public int? TypeId { get; set; }
         public string Sort {get; set; }

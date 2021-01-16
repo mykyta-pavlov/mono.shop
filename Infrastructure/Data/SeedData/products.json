@@ -5,7 +5,13 @@
     "Price": 200,
     "PictureUrl": "images/products/sb-ang1.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 1
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 92,
+    "SizeQuantityS": 49,
+    "SizeQuantityM": 66,
+    "SizeQuantityL": 2,
+    "SizeQuantityXL": 56,
+    "SizeQuantityXXL": 31
   },
   {
     "Name": "Green Angular Board 3000",
@@ -13,7 +19,13 @@
     "Price": 150,
     "PictureUrl": "images/products/sb-ang2.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 1
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 73,
+    "SizeQuantityS": 51,
+    "SizeQuantityM": 36,
+    "SizeQuantityL": 95,
+    "SizeQuantityXL": 33,
+    "SizeQuantityXXL": 81
   },
   {
     "Name": "Core Board Speed Rush 3",
@@ -21,7 +33,13 @@
     "Price": 180,
     "PictureUrl": "images/products/sb-core1.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 2
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 63,
+    "SizeQuantityS": 94,
+    "SizeQuantityM": 17,
+    "SizeQuantityL": 2,
+    "SizeQuantityXL": 21,
+    "SizeQuantityXXL": 61
   },
   {
     "Name": "Net Core Super Board",
@@ -29,15 +47,27 @@
     "Price": 300,
     "PictureUrl": "images/products/sb-core2.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 2
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 71,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 64,
+    "SizeQuantityL": 29,
+    "SizeQuantityXL": 23,
+    "SizeQuantityXXL": 92
   },
   {
-    "Name": "React Board Super Whizzy Fast",
+    "Name": "React Board Supper Whizzy Fast",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 250,
     "PictureUrl": "images/products/sb-react1.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 4
+    "SizeQuantityXxs": 29,
+    "SizeQuantityXs": 51,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 66,
+    "SizeQuantityL": 39,
+    "SizeQuantityXL": 98,
+    "SizeQuantityXXL": 36
   },
   {
     "Name": "Typescript Entry Board",
@@ -45,39 +75,69 @@
     "Price": 120,
     "PictureUrl": "images/products/sb-ts1.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 5
+    "SizeQuantityXxs": 59,
+    "SizeQuantityXs": 71,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 93,
+    "SizeQuantityL": 63,
+    "SizeQuantityXL": 90,
+    "SizeQuantityXXL": 42
   },
   {
-    "Name": "Core Blue Hat",
+    "Name": "Core Maroon Hat",
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 10,
     "PictureUrl": "images/products/hat-core1.png",
     "ProductTypeId": 2,
-    "ProductBrandId": 2
+    "SizeQuantityXxs": 84,
+    "SizeQuantityXs": 62,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 49,
+    "SizeQuantityL": 25,
+    "SizeQuantityXL": 82,
+    "SizeQuantityXXL": 40
   },
   {
-    "Name": "Green React Woolen Hat",
+    "Name": "Greaan React Woolen Hat",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 8,
     "PictureUrl": "images/products/hat-react1.png",
     "ProductTypeId": 2,
-    "ProductBrandId": 4
+    "SizeQuantityXxs": 6,
+    "SizeQuantityXs": 87,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 92,
+    "SizeQuantityL": 20,
+    "SizeQuantityXL": 28,
+    "SizeQuantityXXL": 72
   },
   {
-    "Name": "Purple React Woolen Hat",
+    "Name": "Blue React Woolen Hat",
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 15,
     "PictureUrl": "images/products/hat-react2.png",
     "ProductTypeId": 2,
-    "ProductBrandId": 4
+    "SizeQuantityXxs": 90,
+    "SizeQuantityXs": 25,
+    "SizeQuantityS": 0,
+    "SizeQuantityM": 74,
+    "SizeQuantityL": 84,
+    "SizeQuantityXL": 58,
+    "SizeQuantityXXL": 77
   },
   {
-    "Name": "Blue Code Gloves",
+    "Name": "Bliue Code Gloves",
     "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     "Price": 18,
     "PictureUrl": "images/products/glove-code1.png",
     "ProductTypeId": 4,
-    "ProductBrandId": 3
+    "SizeQuantityXxs": 59,
+    "SizeQuantityXs": 55,
+    "SizeQuantityS": 56,
+    "SizeQuantityM": 86,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 83,
+    "SizeQuantityXXL": 72
   },
   {
     "Name": "Green Code Gloves",
@@ -85,7 +145,13 @@
     "Price": 15,
     "PictureUrl": "images/products/glove-code2.png",
     "ProductTypeId": 4,
-    "ProductBrandId": 3
+    "SizeQuantityXxs": 29,
+    "SizeQuantityXs": 8,
+    "SizeQuantityS": 71,
+    "SizeQuantityM": 52,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 75,
+    "SizeQuantityXXL": 84
   },
   {
     "Name": "Purple React Gloves",
@@ -93,7 +159,13 @@
     "Price": 16,
     "PictureUrl": "images/products/glove-react1.png",
     "ProductTypeId": 4,
-    "ProductBrandId": 4
+    "SizeQuantityXxs": 87,
+    "SizeQuantityXs": 32,
+    "SizeQuantityS": 55,
+    "SizeQuantityM": 76,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 67,
+    "SizeQuantityXXL": 53
   },
   {
     "Name": "Green React Gloves",
@@ -101,7 +173,13 @@
     "Price": 14,
     "PictureUrl": "images/products/glove-react2.png",
     "ProductTypeId": 4,
-    "ProductBrandId": 4
+    "SizeQuantityXxs": 97,
+    "SizeQuantityXs": 93,
+    "SizeQuantityS": 78,
+    "SizeQuantityM": 46,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 55,
+    "SizeQuantityXXL": 10
   },
   {
     "Name": "Redis Red Boots",
@@ -109,7 +187,13 @@
     "Price": 250,
     "PictureUrl": "images/products/boot-redis1.png",
     "ProductTypeId": 3,
-    "ProductBrandId": 6
+    "SizeQuantityXxs": 35,
+    "SizeQuantityXs": 19,
+    "SizeQuantityS": 92,
+    "SizeQuantityM": 73,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 14,
+    "SizeQuantityXXL": 14
   },
   {
     "Name": "Core Red Boots",
@@ -117,7 +201,13 @@
     "Price": 189.99,
     "PictureUrl": "images/products/boot-core2.png",
     "ProductTypeId": 3,
-    "ProductBrandId": 2
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 38,
+    "SizeQuantityS": 4,
+    "SizeQuantityM": 71,
+    "SizeQuantityL": 0,
+    "SizeQuantityXL": 76,
+    "SizeQuantityXXL": 88
   },
   {
     "Name": "Core Purple Boots",
@@ -125,7 +215,13 @@
     "Price": 199.99,
     "PictureUrl": "images/products/boot-core1.png",
     "ProductTypeId": 3,
-    "ProductBrandId": 2
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 2,
+    "SizeQuantityS": 72,
+    "SizeQuantityM": 55,
+    "SizeQuantityL": 61,
+    "SizeQuantityXL": 88,
+    "SizeQuantityXXL": 5
   },
   {
     "Name": "Angular Purple Boots",
@@ -133,7 +229,13 @@
     "Price": 150,
     "PictureUrl": "images/products/boot-ang2.png",
     "ProductTypeId": 3,
-    "ProductBrandId": 1
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 6,
+    "SizeQuantityS": 35,
+    "SizeQuantityM": 31,
+    "SizeQuantityL": 94,
+    "SizeQuantityXL": 46,
+    "SizeQuantityXXL": 73
   },
   {
     "Name": "Angular Blue Boots",
@@ -141,6 +243,12 @@
     "Price": 180,
     "PictureUrl": "images/products/boot-ang1.png",
     "ProductTypeId": 3,
-    "ProductBrandId": 1
+    "SizeQuantityXxs": 0,
+    "SizeQuantityXs": 98,
+    "SizeQuantityS": 7,
+    "SizeQuantityM": 90,
+    "SizeQuantityL": 21,
+    "SizeQuantityXL": 54,
+    "SizeQuantityXXL": 91
   }
 ]

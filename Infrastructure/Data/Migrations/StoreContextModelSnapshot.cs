@@ -119,6 +119,27 @@ namespace Infrastructure.Data.Migrations
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("SizeQuantityL")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityM")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityS")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityXl")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityXs")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityXxl")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SizeQuantityXxs")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductTypeId");

@@ -15,6 +15,13 @@ namespace Infrastructure.Data.Config
             builder.Property(p => p.PictureUrl).IsRequired();
             builder.HasOne(t => t.ProductType).WithMany()
                 .HasForeignKey(p => p.ProductTypeId);
+            builder.Property(p => p.SizeQuantityXxs).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityXs).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityS).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityM).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityL).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityXl).HasColumnType("integer");
+            builder.Property(p => p.SizeQuantityXxl).HasColumnType("integer");
         }
     }
 }
