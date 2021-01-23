@@ -16,6 +16,18 @@ namespace Infrastructure.Data
         {
             try
             {
+                if (!context.ProductCategories.Any())
+                {
+                    var categoriesData = File.ReadAllText("../Infrastructure/Data/SeedData/categories.json");
+                    var categories = JsonSerializer.Deserialize<List<ProductCategory>>(categoriesData);
+                    foreach (var item in categories)
+                    {
+                        context.ProductCategories.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+                
                 if (!context.ProductTypes.Any())
                 {
                     var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");

@@ -19,12 +19,14 @@ namespace API.Controllers
     {
         private readonly IGenericRepository<Product> _productsRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
+        private readonly IGenericRepository<ProductCategory> _productCategoryRepo;
         private readonly IMapper _mapper;
         public ProductsController(IGenericRepository<Product> productsRepo, IGenericRepository<ProductType> productTypeRepo,
-        IMapper mapper)
+            IGenericRepository<ProductCategory> productCategoryRepo, IMapper mapper)
         {
             _mapper = mapper;
             _productTypeRepo = productTypeRepo;
+            _productCategoryRepo = productCategoryRepo;
             _productsRepo = productsRepo;
         }
 
@@ -64,7 +66,17 @@ namespace API.Controllers
         [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes(int id)
         {
-            return Ok(await _productTypeRepo.ListAllAsync());
+            var spec = new TypesWithCategoriesSpecification();
+
+            var types = await _productTypeRepo.ListAsync(spec);
+            
+            return Ok(_mapper.Map<IReadOnlyList<ProductType>, IReadOnlyList<TypesDto>>(types));
+        }
+        
+        [HttpGet("categories")]
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductCategories(int id)
+        {
+            return Ok(await _productCategoryRepo.ListAllAsync());
         }
     }
 }

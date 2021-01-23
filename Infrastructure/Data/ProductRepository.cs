@@ -32,5 +32,10 @@ namespace Infrastructure.Data
         {
             return await _context.ProductTypes.ToListAsync();
         }
+        
+        public async Task<IReadOnlyList<ProductCategory>> GetProductCategoriesAsync()
+        {
+            return await _context.ProductCategories.ToListAsync();
+        }
     }
 }

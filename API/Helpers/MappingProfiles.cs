@@ -21,6 +21,9 @@ namespace API.Helpers
                 .ForMember(d => d.SizeAvailableXl, o => o.MapFrom(s => s.SizeQuantityXl != 0))
                 .ForMember(d => d.SizeAvailableXxl, o => o.MapFrom(s => s.SizeQuantityXxl != 0));
 
+            CreateMap<ProductType, TypesDto>()
+                .ForMember(d => d.ProductCategory, o => o.MapFrom(s => s.ProductCategory.Name));
+            
             CreateMap<Core.Entities.Identity.Address, AddressDto>().ReverseMap();
 
             CreateMap<CustomerBasketDto, CustomerBasket>();

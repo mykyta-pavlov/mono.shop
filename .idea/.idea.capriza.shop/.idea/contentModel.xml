@@ -30,6 +30,7 @@
           <e p="OrderToReturnDto.cs" t="Include" />
           <e p="ProductToReturnDto.cs" t="Include" />
           <e p="RegisterDto.cs" t="Include" />
+          <e p="TypesDto.cs" t="Include" />
           <e p="UserDto.cs" t="Include" />
         </e>
         <e p="Errors" t="Include">
@@ -114,6 +115,7 @@
             <e p="ProductItemOrdered.cs" t="Include" />
           </e>
           <e p="Product.cs" t="Include" />
+          <e p="ProductCategory.cs" t="Include" />
           <e p="ProductType.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
@@ -138,6 +140,7 @@
           <e p="ProductSpecParams.cs" t="Include" />
           <e p="ProductsWithTypesSpecification.cs" t="Include" />
           <e p="ProductWithFilterForCountSpecification.cs" t="Include" />
+          <e p="TypesWithCategoriesSpecification.cs" t="Include" />
         </e>
       </e>
       <e p="Infrastructure" t="IncludeRecursive">
@@ -149,15 +152,17 @@
             <e p="OrderConfiguration.cs" t="Include" />
             <e p="OrderItemConfiguration.cs" t="Include" />
             <e p="ProductConfiguration.cs" t="Include" />
+            <e p="ProductTypeConfiguration.cs" t="Include" />
           </e>
           <e p="GenericRepository.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="20210114161842_AddSizesQuantity.cs" t="Include" />
-            <e p="20210114161842_AddSizesQuantity.Designer.cs" t="Include" />
+            <e p="20210122114257_AddCategoryTable.cs" t="Include" />
+            <e p="20210122114257_AddCategoryTable.Designer.cs" t="Include" />
             <e p="StoreContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="ProductRepository.cs" t="Include" />
           <e p="SeedData" t="Include">
+            <e p="categories.json" t="Include" />
             <e p="delivery.json" t="Include" />
             <e p="products.json" t="Include" />
             <e p="types.json" t="Include" />
