@@ -18,7 +18,6 @@
           <e p="ErrorController.cs" t="Include" />
           <e p="OrdersController.cs" t="Include" />
           <e p="ProductsController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="Dtos" t="Include">
           <e p="AddressDto.cs" t="Include" />
@@ -49,7 +48,6 @@
           <e p="MappingProfiles.cs" t="Include" />
           <e p="OrderItemUrlResolver.cs" t="Include" />
           <e p="Pagination.cs" t="Include" />
-          <e p="ProductUrlResolver.cs" t="Include" />
         </e>
         <e p="identity.db" t="Include" />
         <e p="Middleware" t="Include">
@@ -68,7 +66,6 @@
         </e>
         <e p="skinet.db" t="Include" />
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="images" t="Include">
             <e p="products" t="Include">
