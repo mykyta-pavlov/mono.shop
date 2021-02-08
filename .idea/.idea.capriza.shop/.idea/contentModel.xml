@@ -106,6 +106,7 @@
             <e p="Address.cs" t="Include" />
             <e p="AppUser.cs" t="Include" />
           </e>
+          <e p="ImageUrls.cs" t="Include" />
           <e p="OrderAggregate" t="Include">
             <e p="Address.cs" t="Include" />
             <e p="DeliveryMethod.cs" t="Include" />
@@ -116,6 +117,7 @@
           </e>
           <e p="Product.cs" t="Include" />
           <e p="ProductCategory.cs" t="Include" />
+          <e p="ProductSizeQuantity.cs" t="Include" />
           <e p="ProductType.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
@@ -138,7 +140,7 @@
           <e p="ISpecification.cs" t="Include" />
           <e p="OrdersWithItemsAndOrderingSpecification.cs" t="Include" />
           <e p="ProductSpecParams.cs" t="Include" />
-          <e p="ProductsWithTypesSpecification.cs" t="Include" />
+          <e p="ProductsWithTypesAndImagesSpecification.cs" t="Include" />
           <e p="ProductWithFilterForCountSpecification.cs" t="Include" />
           <e p="TypesWithCategoriesSpecification.cs" t="Include" />
         </e>
@@ -156,15 +158,17 @@
           </e>
           <e p="GenericRepository.cs" t="Include" />
           <e p="Migrations" t="Include">
-            <e p="20210122114257_AddCategoryTable.cs" t="Include" />
-            <e p="20210122114257_AddCategoryTable.Designer.cs" t="Include" />
+            <e p="20210206204336_AddSizeQuantity.cs" t="Include" />
+            <e p="20210206204336_AddSizeQuantity.Designer.cs" t="Include" />
             <e p="StoreContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="ProductRepository.cs" t="Include" />
           <e p="SeedData" t="Include">
             <e p="categories.json" t="Include" />
             <e p="delivery.json" t="Include" />
+            <e p="imageUrls.json" t="Include" />
             <e p="products.json" t="Include" />
+            <e p="productSizeQuantity.json" t="Include" />
             <e p="types.json" t="Include" />
           </e>
           <e p="SpecificationEvaluator.cs" t="Include" />

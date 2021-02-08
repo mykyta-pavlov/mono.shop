@@ -51,6 +51,30 @@ namespace Infrastructure.Data
 
                     await context.SaveChangesAsync();
                 }
+                
+                if (!context.ImageUrls.Any())
+                {
+                    var imageUrlsData = File.ReadAllText("../Infrastructure/Data/SeedData/imageUrls.json");
+                    var imageUrls = JsonSerializer.Deserialize<List<ImageUrls>>(imageUrlsData);
+                    foreach (var item in imageUrls)
+                    {
+                        context.ImageUrls.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+                
+                if (!context.ProductSizeQuantity.Any())
+                {
+                    var productSizeQuantityData = File.ReadAllText("../Infrastructure/Data/SeedData/productSizeQuantity.json");
+                    var productSizeQuantity = JsonSerializer.Deserialize<List<ProductSizeQuantity>>(productSizeQuantityData);
+                    foreach (var item in productSizeQuantity)
+                    {
+                        context.ProductSizeQuantity.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
 
                 if (!context.DeliveryMethods.Any())
                 {

@@ -9,14 +9,33 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20210122114257_AddCategoryTable")]
-    partial class AddCategoryTable
+    [Migration("20210206204336_AddSizeQuantity")]
+    partial class AddSizeQuantity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9");
+
+            modelBuilder.Entity("Core.Entities.ImageUrls", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ImageUrls");
+                });
 
             modelBuilder.Entity("Core.Entities.OrderAggregate.DeliveryMethod", b =>
                 {
@@ -111,36 +130,15 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("TEXT")
                         .HasMaxLength(100);
 
-                    b.Property<string>("PictureUrl")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<double>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("SizeQuantityL")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityM")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityS")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityXl")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityXs")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityXxl")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("SizeQuantityXxs")
-                        .HasColumnType("integer");
+                    b.Property<string>("ThumbnailUrl")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -163,6 +161,28 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("ProductCategories");
                 });
 
+            modelBuilder.Entity("Core.Entities.ProductSizeQuantity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SizeName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductSizeQuantity");
+                });
+
             modelBuilder.Entity("Core.Entities.ProductType", b =>
                 {
                     b.Property<int>("Id")
@@ -182,6 +202,15 @@ namespace Infrastructure.Data.Migrations
                     b.HasIndex("ProductCategoryId");
 
                     b.ToTable("ProductTypes");
+                });
+
+            modelBuilder.Entity("Core.Entities.ImageUrls", b =>
+                {
+                    b.HasOne("Core.Entities.Product", "Product")
+                        .WithMany("ImageUrls")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Core.Entities.OrderAggregate.Order", b =>
@@ -257,6 +286,15 @@ namespace Infrastructure.Data.Migrations
                     b.HasOne("Core.Entities.ProductType", "ProductType")
                         .WithMany()
                         .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Entities.ProductSizeQuantity", b =>
+                {
+                    b.HasOne("Core.Entities.Product", "Product")
+                        .WithMany("ProductSizeQuantity")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

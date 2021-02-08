@@ -2,6 +2,7 @@ using API.Extensions;
 using API.Helpers;
 using API.Middleware;
 using AutoMapper;
+using AutoMapperBuilder.Extensions.DependencyInjection;
 using Infrastructure.Data;
 using Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
@@ -31,7 +32,13 @@ namespace API
                 var configuration = ConfigurationOptions.Parse(_config.GetConnectionString("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
             });
-            services.AddAutoMapper(typeof(MappingProfiles));
+            services.AddAutoMapperBuilder(builder =>
+            {
+                builder.Profiles.Add(new MappingProfiles(services.BuildServiceProvider().GetRequiredService<IConfiguration>()));
+            });
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddApplicationServices();
             services.AddIdentityServices(_config);
             services.AddSwaggerDocumentation();

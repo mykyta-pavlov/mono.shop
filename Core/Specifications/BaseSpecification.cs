@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace Core.Specifications
 {
@@ -8,6 +10,8 @@ namespace Core.Specifications
     {
         public Expression<Func<T, bool>> Criteria { get; }
         public List<Expression<Func<T, object>>> Includes { get; } = new List<Expression<Func<T, object>>>();
+        public List<Func<IQueryable<T>, IIncludableQueryable<T, object>>> ListIncludes { get; } =
+            new List<Func<IQueryable<T>, IIncludableQueryable<T, object>>>();
         public Expression<Func<T, object>> OrderBy { get; private set; }
         public Expression<Func<T, object>> OrderByDescending { get; private set; }
 
@@ -26,6 +30,11 @@ namespace Core.Specifications
         {
         }
 
+        protected void AddInclude(Func<IQueryable<T>, IIncludableQueryable<T, object>> includeExpression)
+        {
+            ListIncludes.Add(includeExpression);
+        }
+        
         protected void AddInclude(Expression<Func<T, object>> includeExpression)
         {
             Includes.Add(includeExpression);

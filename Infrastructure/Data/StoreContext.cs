@@ -11,6 +11,8 @@ namespace Infrastructure.Data
     public class StoreContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<ImageUrls> ImageUrls { get; set; }
+        public DbSet<ProductSizeQuantity> ProductSizeQuantity { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Order> Orders { get; set; }

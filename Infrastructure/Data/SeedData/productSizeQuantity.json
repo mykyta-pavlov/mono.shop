@@ -1,0 +1,470 @@
+[
+  {
+    "Id": 1,
+    "SizeName": "XXS",
+    "Quantity": 0,
+    "ProductId": 1
+  },
+  {
+    "Id": 2,
+    "SizeName": "XS",
+    "Quantity": 23,
+    "ProductId": 1
+  },
+  {
+    "Id": 3,
+    "SizeName": "S",
+    "Quantity": 24,
+    "ProductId": 1
+  },
+  {
+    "Id": 4,
+    "SizeName": "M",
+    "Quantity": 23,
+    "ProductId": 1
+  },
+  {
+    "Id": 5,
+    "SizeName": "L",
+    "Quantity": 25,
+    "ProductId": 1
+  },
+  {
+    "Id": 6,
+    "SizeName": "XL",
+    "Quantity": 4,
+    "ProductId": 1
+  },
+  {
+    "Id": 7,
+    "SizeName": "XXL",
+    "Quantity": 0,
+    "ProductId": 1
+  },
+  {
+    "Id": 8,
+    "SizeName": "XXS",
+    "Quantity": 0,
+    "ProductId": 2
+  },
+  {
+    "Id": 9,
+    "SizeName": "XS",
+    "Quantity": 22,
+    "ProductId": 2
+  },
+  {
+    "Id": 10,
+    "SizeName": "S",
+    "Quantity": 4,
+    "ProductId": 2
+  },
+  {
+    "Id": 11,
+    "SizeName": "M",
+    "Quantity": 7,
+    "ProductId": 2
+  },
+  {
+    "Id": 12,
+    "SizeName": "L",
+    "Quantity": 14,
+    "ProductId": 2
+  },
+  {
+    "Id": 13,
+    "SizeName": "XL",
+    "Quantity": 11,
+    "ProductId": 2
+  },
+  {
+    "Id": 14,
+    "SizeName": "XXL",
+    "Quantity": 0,
+    "ProductId": 2
+  },
+  {
+    "Id": 15,
+    "SizeName": "35",
+    "Quantity": 0,
+    "ProductId": 3
+  },
+  {
+    "Id": 16,
+    "SizeName": "36",
+    "Quantity": 18,
+    "ProductId": 3
+  },
+  {
+    "Id": 17,
+    "SizeName": "37",
+    "Quantity": 23,
+    "ProductId": 3
+  },
+  {
+    "Id": 18,
+    "SizeName": "38",
+    "Quantity": 24,
+    "ProductId": 3
+  },
+  {
+    "Id": 19,
+    "SizeName": "39",
+    "Quantity": 2,
+    "ProductId": 3
+  },
+  {
+    "Id": 20,
+    "SizeName": "40",
+    "Quantity": 29,
+    "ProductId": 3
+  },
+  {
+    "Id": 21,
+    "SizeName": "41",
+    "Quantity": 0,
+    "ProductId": 3
+  },
+  {
+    "Id": 22,
+    "SizeName": "42",
+    "Quantity": 16,
+    "ProductId": 3
+  },
+  {
+    "Id": 23,
+    "SizeName": "43",
+    "Quantity": 0,
+    "ProductId": 3
+  },
+  {
+    "Id": 24,
+    "SizeName": "35",
+    "Quantity": 16,
+    "ProductId": 4
+  },
+  {
+    "Id": 25,
+    "SizeName": "36",
+    "Quantity": 1,
+    "ProductId": 4
+  },
+  {
+    "Id": 26,
+    "SizeName": "37",
+    "Quantity": 19,
+    "ProductId": 4
+  },
+  {
+    "Id": 27,
+    "SizeName": "38",
+    "Quantity": 2,
+    "ProductId": 4
+  },
+  {
+    "Id": 28,
+    "SizeName": "39",
+    "Quantity": 15,
+    "ProductId": 4
+  },
+  {
+    "Id": 29,
+    "SizeName": "40",
+    "Quantity": 11,
+    "ProductId": 4
+  },
+  {
+    "Id": 30,
+    "SizeName": "41",
+    "Quantity": 14,
+    "ProductId": 4
+  },
+  {
+    "Id": 31,
+    "SizeName": "42",
+    "Quantity": 7,
+    "ProductId": 4
+  },
+  {
+    "Id": 32,
+    "SizeName": "43",
+    "Quantity": 24,
+    "ProductId": 4
+  },
+  {
+    "Id": 33,
+    "SizeName": "35",
+    "Quantity": 25,
+    "ProductId": 5
+  },
+  {
+    "Id": 34,
+    "SizeName": "36",
+    "Quantity": 16,
+    "ProductId": 5
+  },
+  {
+    "Id": 35,
+    "SizeName": "37",
+    "Quantity": 17,
+    "ProductId": 5
+  },
+  {
+    "Id": 36,
+    "SizeName": "38",
+    "Quantity": 30,
+    "ProductId": 5
+  },
+  {
+    "Id": 37,
+    "SizeName": "39",
+    "Quantity": 27,
+    "ProductId": 5
+  },
+  {
+    "Id": 38,
+    "SizeName": "40",
+    "Quantity": 17,
+    "ProductId": 5
+  },
+  {
+    "Id": 39,
+    "SizeName": "41",
+    "Quantity": 20,
+    "ProductId": 5
+  },
+  {
+    "Id": 40,
+    "SizeName": "42",
+    "Quantity": 21,
+    "ProductId": 5
+  },
+  {
+    "Id": 41,
+    "SizeName": "43",
+    "Quantity": 21,
+    "ProductId": 5
+  },
+  {
+    "Id": 42,
+    "SizeName": "35",
+    "Quantity": 3,
+    "ProductId": 6
+  },
+  {
+    "Id": 43,
+    "SizeName": "36",
+    "Quantity": 20,
+    "ProductId": 6
+  },
+  {
+    "Id": 44,
+    "SizeName": "37",
+    "Quantity": 13,
+    "ProductId": 6
+  },
+  {
+    "Id": 45,
+    "SizeName": "38",
+    "Quantity": 23,
+    "ProductId": 6
+  },
+  {
+    "Id": 46,
+    "SizeName": "39",
+    "Quantity": 20,
+    "ProductId": 6
+  },
+  {
+    "Id": 47,
+    "SizeName": "40",
+    "Quantity": 30,
+    "ProductId": 6
+  },
+  {
+    "Id": 48,
+    "SizeName": "41",
+    "Quantity": 25,
+    "ProductId": 6
+  },
+  {
+    "Id": 49,
+    "SizeName": "42",
+    "Quantity": 10,
+    "ProductId": 6
+  },
+  {
+    "Id": 50,
+    "SizeName": "43",
+    "Quantity": 1,
+    "ProductId": 6
+  },
+  {
+    "Id": 51,
+    "SizeName": "35",
+    "Quantity": 18,
+    "ProductId": 7
+  },
+  {
+    "Id": 52,
+    "SizeName": "36",
+    "Quantity": 28,
+    "ProductId": 7
+  },
+  {
+    "Id": 53,
+    "SizeName": "37",
+    "Quantity": 30,
+    "ProductId": 7
+  },
+  {
+    "Id": 54,
+    "SizeName": "38",
+    "Quantity": 21,
+    "ProductId": 7
+  },
+  {
+    "Id": 55,
+    "SizeName": "39",
+    "Quantity": 15,
+    "ProductId": 7
+  },
+  {
+    "Id": 56,
+    "SizeName": "40",
+    "Quantity": 3,
+    "ProductId": 7
+  },
+  {
+    "Id": 57,
+    "SizeName": "41",
+    "Quantity": 7,
+    "ProductId": 7
+  },
+  {
+    "Id": 58,
+    "SizeName": "42",
+    "Quantity": 9,
+    "ProductId": 7
+  },
+  {
+    "Id": 59,
+    "SizeName": "43",
+    "Quantity": 21,
+    "ProductId": 7
+  },
+  {
+    "Id": 60,
+    "SizeName": "Один розмір",
+    "Quantity": 5,
+    "ProductId": 8
+  },
+  {
+    "Id": 61,
+    "SizeName": "Один розмір",
+    "Quantity": 22,
+    "ProductId": 9
+  },
+  {
+    "Id": 62,
+    "SizeName": "Один розмір",
+    "Quantity": 3,
+    "ProductId": 10
+  },
+  {
+    "Id": 63,
+    "SizeName": "Один розмір",
+    "Quantity": 18,
+    "ProductId": 11
+  },
+  {
+    "Id": 64,
+    "SizeName": "Один розмір",
+    "Quantity": 12,
+    "ProductId": 12
+  },
+  {
+    "Id": 65,
+    "SizeName": "Один розмір",
+    "Quantity": 26,
+    "ProductId": 13
+  },
+  {
+    "Id": 66,
+    "SizeName": "S",
+    "Quantity": 9,
+    "ProductId": 14
+  },
+  {
+    "Id": 67,
+    "SizeName": "M",
+    "Quantity": 21,
+    "ProductId": 14
+  },
+  {
+    "Id": 68,
+    "SizeName": "L",
+    "Quantity": 30,
+    "ProductId": 14
+  },
+  {
+    "Id": 69,
+    "SizeName": "36",
+    "Quantity": 7,
+    "ProductId": 15
+  },
+  {
+    "Id": 70,
+    "SizeName": "37",
+    "Quantity": 5,
+    "ProductId": 15
+  },
+  {
+    "Id": 71,
+    "SizeName": "38",
+    "Quantity": 13,
+    "ProductId": 15
+  },
+  {
+    "Id": 72,
+    "SizeName": "39",
+    "Quantity": 18,
+    "ProductId": 15
+  },
+  {
+    "Id": 73,
+    "SizeName": "XS",
+    "Quantity": 10,
+    "ProductId": 16
+  },
+  {
+    "Id": 74,
+    "SizeName": "S",
+    "Quantity": 23,
+    "ProductId": 16
+  },
+  {
+    "Id": 75,
+    "SizeName": "M",
+    "Quantity": 7,
+    "ProductId": 16
+  },
+  {
+    "Id": 76,
+    "SizeName": "37",
+    "Quantity": 8,
+    "ProductId": 17
+  },
+  {
+    "Id": 77,
+    "SizeName": "38",
+    "Quantity": 10,
+    "ProductId": 17
+  },
+  {
+    "Id": 78,
+    "SizeName": "Один розмір",
+    "Quantity": 11,
+    "ProductId": 18
+  }
+]

@@ -21,6 +21,7 @@ namespace API.Controllers
         private readonly IGenericRepository<ProductType> _productTypeRepo;
         private readonly IGenericRepository<ProductCategory> _productCategoryRepo;
         private readonly IMapper _mapper;
+
         public ProductsController(IGenericRepository<Product> productsRepo, IGenericRepository<ProductType> productTypeRepo,
             IGenericRepository<ProductCategory> productCategoryRepo, IMapper mapper)
         {
@@ -34,14 +35,14 @@ namespace API.Controllers
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
             [FromQuery]ProductSpecParams productParams)
         {
-            var spec = new ProductsWithTypesSpecification(productParams);
-
+            var spec = new ProductsWithTypesAndImagesSpecification(productParams);
+            
             var countSpec = new ProductWithFilterForCountSpecification(productParams);
 
             var totalItems = await _productsRepo.CountAsync(countSpec);
 
             var products = await _productsRepo.ListAsync(spec);
-
+            
             var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products); 
 
             return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, 
@@ -53,7 +54,7 @@ namespace API.Controllers
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
-            var spec = new ProductsWithTypesSpecification(id);
+            var spec = new ProductsWithTypesAndImagesSpecification(id);
 
             var product = await _productsRepo.GetEntityWithSpec(spec);
 

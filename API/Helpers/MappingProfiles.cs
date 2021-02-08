@@ -1,25 +1,26 @@
+using System.Collections.Generic;
+using System.Linq;
 using API.Dtos;
 using AutoMapper;
 using Core.Entities;
 using Core.Entities.Identity;
 using Core.Entities.OrderAggregate;
+using Microsoft.Extensions.Configuration;
 
 namespace API.Helpers
 {
     public class MappingProfiles : Profile
     {
-        public MappingProfiles()
+        public MappingProfiles(IConfiguration config)
         {
             CreateMap<Product, ProductToReturnDto>()
                 .ForMember(d => d.ProductType, o => o.MapFrom(s => s.ProductType.Name))
-                .ForMember(d => d.PictureUrl, o => o.MapFrom<ProductUrlResolver>())
-                .ForMember(d => d.SizeAvailableXxs, o => o.MapFrom(s => s.SizeQuantityXxs != 0))
-                .ForMember(d => d.SizeAvailableXs, o => o.MapFrom(s => s.SizeQuantityXs != 0))
-                .ForMember(d => d.SizeAvailableS, o => o.MapFrom(s => s.SizeQuantityS != 0))
-                .ForMember(d => d.SizeAvailableM, o => o.MapFrom(s => s.SizeQuantityM != 0))
-                .ForMember(d => d.SizeAvailableL, o => o.MapFrom(s => s.SizeQuantityL != 0))
-                .ForMember(d => d.SizeAvailableXl, o => o.MapFrom(s => s.SizeQuantityXl != 0))
-                .ForMember(d => d.SizeAvailableXxl, o => o.MapFrom(s => s.SizeQuantityXxl != 0));
+                .ForMember(d => d.ThumbnailUrl, o => o.MapFrom(s => config["ApiUrl"] + s.ThumbnailUrl))
+                .ForMember(d => d.ImageUrls,
+                    o => o.MapFrom(s => s.ImageUrls.Select(x => config["ApiUrl"] + x.ImageUrl)))
+                .ForMember(d => d.SizesAvailable,
+                    o => o.MapFrom(s =>
+                        s.ProductSizeQuantity.Select(x => new KeyValuePair<string, bool>(x.SizeName, x.Quantity != 0))));
 
             CreateMap<ProductType, TypesDto>()
                 .ForMember(d => d.ProductCategory, o => o.MapFrom(s => s.ProductCategory.Name));

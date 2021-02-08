@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Data.Migrations
 {
-    public partial class AddCategoryTable : Migration
+    public partial class AddSizeQuantity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -118,15 +118,8 @@ namespace Infrastructure.Data.Migrations
                     Name = table.Column<string>(maxLength: 100, nullable: false),
                     Description = table.Column<string>(maxLength: 180, nullable: false),
                     Price = table.Column<double>(type: "decimal(18,2)", nullable: false),
-                    PictureUrl = table.Column<string>(nullable: false),
-                    ProductTypeId = table.Column<int>(nullable: false),
-                    SizeQuantityXxs = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityXs = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityS = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityM = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityL = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityXl = table.Column<int>(type: "integer", nullable: false),
-                    SizeQuantityXxl = table.Column<int>(type: "integer", nullable: false)
+                    ThumbnailUrl = table.Column<string>(nullable: false),
+                    ProductTypeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -138,6 +131,52 @@ namespace Infrastructure.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "ImageUrls",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ImageUrl = table.Column<string>(nullable: true),
+                    ProductId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ImageUrls", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ImageUrls_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductSizeQuantity",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    SizeName = table.Column<string>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductSizeQuantity", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductSizeQuantity_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ImageUrls_ProductId",
+                table: "ImageUrls",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
@@ -155,6 +194,11 @@ namespace Infrastructure.Data.Migrations
                 column: "ProductTypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductSizeQuantity_ProductId",
+                table: "ProductSizeQuantity",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductTypes_ProductCategoryId",
                 table: "ProductTypes",
                 column: "ProductCategoryId");
@@ -163,19 +207,25 @@ namespace Infrastructure.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "ImageUrls");
+
+            migrationBuilder.DropTable(
                 name: "OrderItems");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "ProductSizeQuantity");
 
             migrationBuilder.DropTable(
                 name: "Orders");
 
             migrationBuilder.DropTable(
-                name: "ProductTypes");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "DeliveryMethods");
+
+            migrationBuilder.DropTable(
+                name: "ProductTypes");
 
             migrationBuilder.DropTable(
                 name: "ProductCategories");
