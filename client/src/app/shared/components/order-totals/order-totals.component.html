@@ -1,4 +1,20 @@
-<div class="bg-light px-4 text-uppercase font-weight-bold" style="padding: 1.20em;">
+<table class="basket__table" *ngIf="(basketTotal$ | async) as totals">
+    <tbody>
+        <tr>
+            <td>Сума:</td>
+            <td>{{totals.subtotal | currency}}</td>
+        </tr>
+        <tr>
+            <td>Вартість доставки:</td>
+            <td>{{totals.shipping | currency}}</td>
+        </tr>
+        <tr>
+            <td>Загалом:</td>
+            <td>{{totals.total | currency}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- <div class="bg-light px-4 text-uppercase font-weight-bold" style="padding: 1.20em;">
     Order Summary
 </div>
 <div class="p-4">
@@ -17,4 +33,4 @@
             <strong>{{totals.total | currency}}</strong>
         </li>
     </ul>
-</div>
+</div> -->

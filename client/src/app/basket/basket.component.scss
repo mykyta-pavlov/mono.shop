@@ -1,0 +1,53 @@
+@import "/src/variables";
+
+.basket-section {
+    background-color: $white;
+    padding: 67px 0 130px;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 65px;
+        box-sizing: border-box;
+
+        h3 {
+            font-size: 25px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 10px;
+        }
+
+        .hr {
+            margin-bottom: 10px;
+        }
+
+        .basket__right .hr {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.basket__left, .basket__right {
+    max-width: 450px;
+    width: 100%;
+}
+
+.ghost-text {
+    font-size: 13px;
+    font-weight: 200;
+    color: $black;
+    line-height: 1.54;
+    margin-bottom: 40px;
+}
+
+.basket__table {
+    td {
+        padding: 0 20px 22px 0;
+        font-size: 16px;
+        color: $black;
+    }
+
+    tr td:first-child {
+        font-weight: 500;
+    }
+}

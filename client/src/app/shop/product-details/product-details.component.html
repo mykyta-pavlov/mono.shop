@@ -1,7 +1,78 @@
-<div class="container mt-5">
+<section class="single-product" *ngIf="product">
+    <div class="wrapper">
+        <div class="single-product__images">
+            <img id="slide_holder" src="{{product.imageUrls[slideNumber]}}" alt="{{product.name}}">
+            <div class="vertical-slider">
+                <button (click)="setSliderNumber(slideNumber-1)" class="vertical-slider__up">
+                    <img src="./assets/images/icons/keyboard_arrow_up-24px.svg" alt="arrow up">
+                </button>
+                <div class="vertical-slider__images">
+                    <div id="vertical-slider__container" class="vertical-slider__container"
+                    [ngStyle]="{'margin-top.px': -marginTopIndent * 
+                    (slideNumber > 1 ? 
+                    (slideNumber < verticalSliderLength - 1 ? slideNumber - 1 : verticalSliderLength - 3) 
+                    : 0)}">
+                        <div class="vertical-slider__select"
+                        [ngStyle]="{'top.px': marginTopIndent * slideNumber}"></div>
+                        <img *ngFor="let imageUrl of product.imageUrls; let i = index" 
+                        (click)="setSliderNumber(i)" 
+                        src="{{imageUrl}}" alt="{{product.description}}">
+                    </div>
+                </div>
+                <button (click)="setSliderNumber(slideNumber+1)" class="vertical-slider__down">
+                    <img src="./assets/images/icons/keyboard_arrow_down-24px.svg" alt="arrow down">
+                </button>
+            </div>
+        </div>
+        <div class="single-product__description">
+            <div class="description__container">
+                <h2>{{product.name}}</h2>
+                <p class="cost">{{product.price | currency}}</p>
+                <p class="description">{{product.description}}</p>
+                <div class="specifications">
+                    <div class="specifications__left">
+                        <div class="specifications__count">
+                            <label>Обрати кількість</label>
+                            <div class="number-increment">
+                                <button (click)="decrementQuantity()" type="button" class="number-increment__decrement">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                </button>
+                                <span class="quantity_holder">{{quantity}}</span>
+                                <button (click)="incrementQuantity()" type="button" class="number-increment__increment">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button (click)="addItemToBasket()" class="btn">
+                            Додати до кошика
+                        </button>
+                    </div>
+                    <div class="specifications__right">
+                        <label>Обрати розмір</label>
+                        <!-- <select name="size" id="choose-size">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                        </select> -->
+                        <ng-select [options]="[
+                            {'key':'XS','value':'xs'},
+                            {'key':'S','value':'s'},
+                            {'key':'M','value':'m'},
+                            {'key':'L','value':'l'},
+                            {'key':'XL','value':'xl'},
+                        ]"></ng-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="container mt-5">
     <div class="row" *ngIf="product">
         <div class="col-6">
-            <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid w-100">
+            <img src="{{product.thumbnailUrl}}" alt="{{product.name}}" class="img-fluid w-100">
         </div>
         <div class="col-6">
             <h3>{{product.name}}</h3>
@@ -19,5 +90,8 @@
                 <p>{{product.description}}</p>
             </div>
         </div>
+        <div class="col-4 mb-4" *ngFor="let imageUrl of product.imageUrls">
+            <img src="{{imageUrl}}" alt="{{product.description}}">
+        </div>
     </div>
-</div>
+</div> -->

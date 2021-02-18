@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,12 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { OrdersComponent } from './orders/orders.component';
 
+
+import { registerLocaleData } from '@angular/common';
+import localeUA from '@angular/common/locales/ru-UA';
+
+registerLocaleData(localeUA);
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,8 +30,7 @@ import { OrdersComponent } from './orders/orders.component';
     HttpClientModule,
     CoreModule,
     HomeModule,
-    CoreModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
   providers: [
     {
@@ -42,7 +47,15 @@ import { OrdersComponent } from './orders/orders.component';
       provide: HTTP_INTERCEPTORS,
       useClass: JwtInterceptor,
       multi: true
-    }
+    },
+    {
+      provide: LOCALE_ID,
+      useValue: 'ru-UA'
+    },
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'UAH'
+    },
   ],
   bootstrap: [AppComponent]
 })

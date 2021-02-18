@@ -1,28 +1,87 @@
-.cart-no {
-    position: absolute;
-    min-height: 25px;
-    min-width: 25px;
-    border-radius: 50%;
-    font-size: 1em;
-    background: blue;
-    color: white;
-    text-align: center;
-    top: -12px;
-    right: 32px;
+@import "/src/variables";
+
+.main_navigation {
+    background-color: $white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
-a {
-    text-decoration: none;
-    color: #343a40;
+.main_navigation .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    &.active {
-        color: orange;
+.main_page-list {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+
+    li {
+        margin-right: 65px;
+
+        a {
+            color: $black;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    @media (max-width: 1280px) {
+        // li {
+        //     margin-right: 30px;
+        // }
+        // TODO: make page list fit
     }
 }
 
-.logo {
-    cursor: pointer;
-    &:focus {
-        outline: none;
+.user-links {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 65px;
+
+    a {
+        color: $black;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
     }
+}
+
+.basket {
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 5px;
+        max-width: 18px;
+        max-height: 16px;
+    }
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 65px;
+
+    .hr {
+        background-color: #707070;
+        border-top: solid 1px #707070;
+        width: 124%;
+        margin: 5px 0;
+    }
+}
+
+.main_page-list li a,
+.basket .basket__hover,
+.signup a {
+    transition: color 0.3s ease;
+}
+
+.main_page-list li a:hover,
+.basket:hover .basket__hover,
+.signup a:hover {
+    color: $dark-pink;
 }

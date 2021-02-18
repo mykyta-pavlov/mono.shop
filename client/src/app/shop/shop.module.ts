@@ -5,7 +5,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopRoutingModule } from './shop-routing.module';
-
+import { NgSelectModule } from 'ng-custom-select';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ShopRoutingModule } from './shop-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    ShopRoutingModule
+    ShopRoutingModule,
+    NgSelectModule
   ]
 })
 export class ShopModule { }

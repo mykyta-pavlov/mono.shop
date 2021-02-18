@@ -1,0 +1,13 @@
+@import "/src/variables";
+
+.basket__table {
+    td {
+        padding: 0 20px 22px 0;
+        font-size: 16px;
+        color: $black;
+    }
+
+    tr td:first-child {
+        font-weight: 500;
+    }
+}

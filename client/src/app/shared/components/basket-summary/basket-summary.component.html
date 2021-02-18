@@ -1,5 +1,36 @@
 <ng-container *ngIf="basket$ | async">
-    <div class="table-responsive">
+    <ul class="basket__list">
+        <li class="basket-item" *ngFor="let item of (basket$ | async).items">
+            <div class="basket-item__left">
+                <a routerLink="/shop/{{item.id}}">
+                    <img src="{{item.pictureUrl}}" alt="{{item.productName}}">
+                    <label>{{item.productName}}</label>
+                </a>
+            </div>
+            <div class="basket-item__right">
+                <table class="basket__table">
+                    <tbody>
+                        <tr>
+                            <td>Ціна:</td>
+                            <td>{{item.price | currency}}</td>
+                        </tr>
+                        <tr>
+                            <td>Кількість:</td>
+                            <td>
+                                {{item.quantity}}
+                                <!-- insert counter -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Сума:</td>
+                            <td>{{item.price * item.quantity | currency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+    <!-- <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
@@ -54,5 +85,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
 </ng-container>

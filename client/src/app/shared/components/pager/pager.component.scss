@@ -1,0 +1,43 @@
+@import "/src/variables";
+
+::ng-deep .product-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page-item {
+        margin: 0 15px;
+        cursor: pointer;
+    }
+
+    .pagination-prev {
+        margin: 0 65px 0 0;
+    }
+    .pagination-next {
+        margin: 0 0 0 65px;
+    }
+
+    .page-item a {
+        display: flex;
+        align-items: center;
+        color: $black;
+    }
+
+    .page-link {
+        transition: color 0.3s ease;
+    }
+
+    .page-link:hover,
+    .pagination-page.active .page-link {
+        color: $dark-pink;
+    }
+
+    .page-item.disabled .page-link:hover {
+        cursor: default;
+        color: $black;
+    }
+
+    .page-link {
+        font-size: 25px;
+    }
+}

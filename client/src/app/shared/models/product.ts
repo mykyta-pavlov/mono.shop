@@ -3,6 +3,8 @@ export interface IProduct {
     name: string;
     description: string;
     price: number;
-    pictureUrl: string;
+    thumbnailUrl: string;
+    imageUrls: string[];
+    sizesAvailable: [string: boolean];
     productType: string;
   }
