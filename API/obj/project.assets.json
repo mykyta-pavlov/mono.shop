@@ -9042,34 +9042,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mykyt\\.nuget\\packages\\": {}
+    "/home/laptop/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mykyt\\source\\capriza.shop\\API\\API.csproj",
+      "projectUniqueName": "/mnt/c/Users/vital/source/repos/mykyta-pavlov/capriza.shop/API/API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\mykyt\\source\\capriza.shop\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\mykyt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mykyt\\source\\capriza.shop\\API\\obj\\",
+      "projectPath": "/mnt/c/Users/vital/source/repos/mykyta-pavlov/capriza.shop/API/API.csproj",
+      "packagesPath": "/home/laptop/.nuget/packages/",
+      "outputPath": "/mnt/c/Users/vital/source/repos/mykyta-pavlov/capriza.shop/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mykyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/laptop/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\mykyt\\source\\capriza.shop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\mykyt\\source\\capriza.shop\\Infrastructure\\Infrastructure.csproj"
+            "/mnt/c/Users/vital/source/repos/mykyta-pavlov/capriza.shop/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/mnt/c/Users/vital/source/repos/mykyta-pavlov/capriza.shop/Infrastructure/Infrastructure.csproj"
             }
           }
         }
@@ -9137,7 +9135,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

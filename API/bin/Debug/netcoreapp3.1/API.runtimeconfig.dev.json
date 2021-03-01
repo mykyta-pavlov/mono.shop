@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\mykyt\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mykyt\\.nuget\\packages"
+      "/home/laptop/.dotnet/store/|arch|/|tfm|",
+      "/home/laptop/.nuget/packages"
     ]
   }
 }

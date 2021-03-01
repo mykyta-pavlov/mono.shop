@@ -7,7 +7,7 @@ namespace API.Dtos
         [Required]
         public string DisplayName { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Електронна пошта є обов'язковим полем")]
         [EmailAddress]
         public string Email { get; set; }
 
