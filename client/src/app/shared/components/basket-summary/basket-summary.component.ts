@@ -10,23 +10,20 @@ import { IBasket, IBasketItem } from '../../models/basket';
 })
 export class BasketSummaryComponent implements OnInit {
   basket$: Observable<IBasket>;
-  @Output() decrement: EventEmitter<IBasketItem> = new EventEmitter<IBasketItem>();
-  @Output() increment: EventEmitter<IBasketItem> = new EventEmitter<IBasketItem>();
+  @Output() changeEvent: EventEmitter<{item: IBasketItem, quantity: number}> 
+    = new EventEmitter<{item: IBasketItem, quantity: number}>();
   @Output() remove: EventEmitter<IBasketItem> = new EventEmitter<IBasketItem>();
   @Input() isBasket = true;
 
   constructor(private basketService: BasketService) { }
 
   ngOnInit(): void {
+    console.log(this.basket$);
     this.basket$ = this.basketService.basket$;
   }
 
-  decrementItemQuantity(item: IBasketItem): void {
-    this.decrement.emit(item);
-  }
-
-  incrementItemQuantity(item: IBasketItem): void {
-    this.increment.emit(item);
+  changeItemQuantity(item: IBasketItem, quantity: number): void {
+    this.changeEvent.emit({item, quantity});
   }
 
   removeBasketItem(item: IBasketItem): void {

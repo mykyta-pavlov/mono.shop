@@ -17,19 +17,29 @@
                         <tr>
                             <td>Кількість:</td>
                             <td>
-                                {{item.quantity}}
-                                <!-- insert counter -->
+                                <app-number-increment 
+                                [quantity]="item.quantity"
+                                (changeEvent)="changeItemQuantity(item, $event)"
+                                *ngIf="isBasket"
+                                ></app-number-increment>                                
+                                <ng-container *ngIf="!isBasket">{{item.quantity}}</ng-container>
                             </td>
                         </tr>
                         <tr>
                             <td>Сума:</td>
                             <td>{{item.price * item.quantity | currency}}</td>
                         </tr>
+                        <tr *ngIf="isBasket">
+                            <button 
+                                (click)="removeBasketItem(item)" 
+                                class="btn btn-danger">Видалити</button>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </li>
     </ul>
+</ng-container>
     <!-- <div class="table-responsive">
         <table class="table">
             <thead>
@@ -86,4 +96,3 @@
             </tbody>
         </table>
     </div> -->
-</ng-container>

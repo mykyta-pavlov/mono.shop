@@ -7,8 +7,7 @@
             <h3>Товари у кошику</h3>
             <div class="hr"></div>
             <app-basket-summary
-                (decrement)="decrementItemQuantity($event)"
-                (increment)="incrementItemQuantity($event)"
+                (changeEvent)="emitQuantity($event)"
                 (remove)="removeBasketItem($event)"
             ></app-basket-summary>
         </div>

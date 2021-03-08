@@ -1,0 +1,10 @@
+<div class="select">
+    <input type="text" value="idk" id="label" readonly>
+    <label class="input-label" for="label">label</label>
+    <ul class="select__options">
+        <li *ngFor="let option of options; let i = index" class="select__option">
+            <label for="{{i}}">{{option.name}}</label>
+            <input type="radio" name="{{option.name}}" id="{{i}}">
+        </li>
+    </ul>
+</div>

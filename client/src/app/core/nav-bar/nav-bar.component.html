@@ -5,35 +5,36 @@
             <li><a routerLink="/shop">Жіночій одяг</a></li>
             <li><a routerLink="/shop">Дитячий одяг</a></li>
         </ul>
-        <a class="logo" routerLink="/">
-          <img 
-            src="./assets/images/capriza.shop (circle).png" 
-            alt="capriza shop"></a>
-        <div class="user-links">
+        <app-logo></app-logo>
+        <ul class="user-links">
+          <li>
             <a class="basket" routerLink="/basket">
                 <svg class="basket__hover svg-inline--fa fa-shopping-basket fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-basket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path></svg>
                 <p class="basket__hover">Кошик</p>
             </a>
-            <ng-container *ngIf="(currentUser$ | async) === null">
+          </li>
+            <li *ngIf="(currentUser$ | async) === null">
               <div class="signup">
                   <a routerLink="/account/login">Вхід</a>
                   <div class="hr"></div>
                   <a routerLink="/account/register">Реєстрація</a>
               </div>
-            </ng-container>
-            <ng-container *ngIf="currentUser$ | async">
-                <strong>WELCOME {{(currentUser$ | async).displayName}}</strong>
-                  <!-- <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
-                    <i class="fa fa-shopping-cart mr-3"></i> View Basket
-                  </a> -->
-                  <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
-                    <i class="fa fa-history mr-3"></i> View Orders
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
-                    <i class="fa fa-sign-out mr-3"></i> Logout
-                  </a>
-            </ng-container>
-        </div>
+            </li>
+            <li *ngIf="currentUser$ | async" class="user-links__dropdown">
+                  <button class="dropdown-button">
+                    Привіт, {{(currentUser$ | async).displayName}}
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a routerLink="/orders" class="">
+                      <i class="fa fa-history mr-3"></i> Замовлення
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a (click)="logout()" class="">
+                      <i class="fa fa-sign-out mr-3"></i> Вийти
+                    </a>
+                  </div>
+            </li>
+          </ul>
     </div>
   </nav>

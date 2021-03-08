@@ -24,18 +24,12 @@ export class ProductDetailsComponent implements OnInit {
     this.loadProduct();
   }
 
+  getQuantity(quantity: number): void {
+    this.quantity = quantity;
+  }
+
   addItemToBasket(): void {
     this.basketService.addItemToBasket(this.product, this.quantity);
-  }
-
-  incrementQuantity(): void {
-    this.quantity++;
-  }
-
-  decrementQuantity(): void {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
   }
 
   loadProduct(): void {
@@ -44,7 +38,6 @@ export class ProductDetailsComponent implements OnInit {
       this.bcService.set('@productDetails', product.name);
 
       this.verticalSliderLength = product.imageUrls.length;
-      console.log(product.imageUrls.length);
     }, error => {
       console.log(error);
     });

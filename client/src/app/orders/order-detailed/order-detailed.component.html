@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <div class="row" *ngIf="order">
         <div class="col-8">
             <div>
@@ -70,4 +70,63 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<section class="basket-section">
+    <div class="wrapper">
+        <div class="basket__left">
+            <h3>Замовлення</h3>
+            <div class="hr"></div>
+            <ul class="basket__list">
+                <li class="basket-item" *ngFor="let item of order.orderItems">
+                    <div class="basket-item__left">
+                        <a routerLink="/shop/{{item.productId}}">
+                            <img src="{{item.thumbnailUrl}}" alt="{{item.productName}}">
+                            <label>{{item.productName}}</label>
+                        </a>
+                    </div>
+                    <div class="basket-item__right">
+                        <table class="basket__table">
+                            <tbody>
+                                <tr>
+                                    <td>Ціна:</td>
+                                    <td>{{item.price | currency}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Кількість:</td>
+                                    <td>                                
+                                        <ng-container>{{item.quantity}}</ng-container>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Сума:</td>
+                                    <td>{{item.price * item.quantity | currency}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="basket__right">
+            <h3>Підсумки</h3>
+            <div class="hr"></div>
+            <table class="basket__table">
+                <tbody>
+                    <tr>
+                        <td>Сума:</td>
+                        <td>{{order.subtotal | currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Вартість доставки:</td>
+                        <td>{{order.shippingPrice | currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Загалом:</td>
+                        <td>{{order.total | currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

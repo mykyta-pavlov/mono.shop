@@ -12,10 +12,13 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { BasketSummaryComponent } from './components/basket-summary/basket-summary.component';
 import { RouterModule } from '@angular/router';
+import { NumberIncrementComponent } from './components/number-increment/number-increment.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent],
+  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent, NumberIncrementComponent, LogoComponent, SelectComponent],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
@@ -36,7 +39,10 @@ import { RouterModule } from '@angular/router';
     TextInputComponent,
     CdkStepperModule,
     StepperComponent,
-    BasketSummaryComponent
+    BasketSummaryComponent,
+    NumberIncrementComponent,
+    LogoComponent,
+    SelectComponent
   ]
 })
 export class SharedModule { }

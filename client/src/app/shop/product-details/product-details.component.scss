@@ -208,26 +208,6 @@
     }
 }
 
-.number-increment {
-    display: flex;
-    align-items: center;
-}
-
-.number-increment__decrement {
-    margin-right: 20px;
-}
-
-.number-increment__increment,
-.number-increment__decrement {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-input[name="quantity"] {
-    display: none;
-}
-
 select[name="size"] {
     max-width: 135px;
     background-color: #fff;
@@ -238,14 +218,4 @@ select[name="size"] {
     font-size: 16px;
     font-weight: 600;
     color: #3f3f3f;
-}
-
-.quantity_holder { 
-    margin-right: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #3f3f3f;
-    width: 25px;
-    text-align: center;
-    user-select: none;
 }

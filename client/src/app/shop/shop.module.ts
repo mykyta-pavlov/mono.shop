@@ -5,8 +5,7 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopRoutingModule } from './shop-routing.module';
-import { NgSelectModule } from 'ng-custom-select';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [ShopComponent, ProductItemComponent, ProductDetailsComponent],
@@ -14,7 +13,7 @@ import { NgSelectModule } from 'ng-custom-select';
     CommonModule,
     SharedModule,
     ShopRoutingModule,
-    NgSelectModule
+    NgSelectModule,
   ]
 })
 export class ShopModule { }

@@ -21,7 +21,7 @@ registerLocaleData(localeUA);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

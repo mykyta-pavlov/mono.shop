@@ -7,14 +7,15 @@
 
 .main_navigation .wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .main_page-list {
     display: flex;
-    flex: 1;
     justify-content: flex-end;
+    flex: 1;
+    margin-right: 65px;
 
     li {
         margin-right: 65px;
@@ -26,6 +27,10 @@
             text-transform: uppercase;
         }
     }
+    li:last-child {
+        margin-right: 0;
+    }
+
     @media (max-width: 1280px) {
         // li {
         //     margin-right: 30px;
@@ -36,9 +41,9 @@
 
 .user-links {
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: flex-end;
+    flex: 1;
     padding-right: 65px;
 
     a {
@@ -49,14 +54,58 @@
     }
 }
 
+.user-links li {
+    margin-left: 65px;
+}
+
+.user-links__dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 2px;
+    z-index: 1;
+    padding: 5px;
+    width: 100%;
+    right: 0;
+}
+
+.dropdown-divider {
+    margin: 3px 0;
+}
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dropdown-button svg {
+    width: 17px;
+    height: 19px;
+    margin-left: 5px;
+}
+
+.dropdown-button:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
 .basket {
     display: flex;
     align-items: center;
 
     svg {
         margin-right: 5px;
-        max-width: 18px;
-        max-height: 16px;
+        width: 18px;
+        height: 16px;
     }
 }
 
@@ -64,12 +113,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 65px;
+
+    a {
+        padding: 0 12px;
+    }
 
     .hr {
-        background-color: #707070;
-        border-top: solid 1px #707070;
-        width: 124%;
         margin: 5px 0;
     }
 }

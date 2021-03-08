@@ -40,9 +40,9 @@ export class ShopComponent implements OnInit {
   shopParams = new ShopParams();
   totalCount: number;
   sortOptions = [
-    {name: 'Alphabetical', value: 'name'},
-    {name: 'Price: Low to High', value: 'priceAsc'},
-    {name: 'Price: High to Low', value: 'priceDesc'}
+    {name: 'За алфавітом', value: 'name'},
+    {name: 'Ціна: від низької до високої', value: 'priceAsc'},
+    {name: 'Ціна: від високої до низької', value: 'priceDesc'}
   ];
 
   constructor(private shopService: ShopService) { }
@@ -84,6 +84,7 @@ export class ShopComponent implements OnInit {
   }
 
   onTypeSelected(typeId: number): void {
+    console.log(typeId);
     this.shopParams.typeId = typeId;
     this.shopParams.pageNumber = 1;
     this.getProducts();
