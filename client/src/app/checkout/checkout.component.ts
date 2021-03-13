@@ -26,10 +26,11 @@ export class CheckoutComponent implements OnInit {
         city: [null, Validators.required],
         state: [null, Validators.required],
         zipcode: [null, Validators.required],
-      }),
-      deliveryForm: this.fb.group({
         deliveryMethod: [null, Validators.required],
       }),
+      // deliveryForm: this.fb.group({
+      //   deliveryMethod: [null, Validators.required],
+      // }),
       paymentForm: this.fb.group({
         nameOnCard: [null, Validators.required]
       })

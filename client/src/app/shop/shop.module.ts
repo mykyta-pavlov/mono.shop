@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopRoutingModule } from './shop-routing.module';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ShopComponent, ProductItemComponent, ProductDetailsComponent],
@@ -14,6 +15,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     SharedModule,
     ShopRoutingModule,
     NgSelectModule,
+    FormsModule
   ]
 })
 export class ShopModule { }

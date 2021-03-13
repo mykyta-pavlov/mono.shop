@@ -1,43 +1,73 @@
-<div class="mt-4" [formGroup]="checkoutForm">
-    <div class="d-flex justify-content-between align-items-center">
-        <h4>Shipping address</h4>
-        <button
-            (click)="saveUserAddress()"
-            [disabled]="!checkoutForm.get('addressForm').valid || !checkoutForm.get('addressForm').dirty"
-            class="btn btn-outline-success mb-3">
-            Save as default address
-        </button>
-    </div>
-    <div class="row" formGroupName="addressForm">
-        <app-select [options]="['wow', 'such', 'array']"></app-select>
-        <div class="form-group col-6">
-            <app-text-input [label]="'First Name'" formControlName="firstName"></app-text-input>
-        </div>
-        <div class="form-group col-6">
-            <app-text-input [label]="'Last Name'" formControlName="lastName"></app-text-input>
-        </div>
-        <div class="form-group col-6">
-            <app-text-input [label]="'Street'" formControlName="street"></app-text-input>
-        </div>
-        <div class="form-group col-6">
-            <app-text-input [label]="'City'" formControlName="city"></app-text-input>
-        </div>
-        <div class="form-group col-6">
-            <app-text-input [label]="'State'" formControlName="state"></app-text-input>
-        </div>
-        <div class="form-group col-6">
-            <app-text-input [label]="'Zip Code'" formControlName="zipcode"></app-text-input>
-        </div>
-    </div>
-</div>
+<!-- <div class="d-flex justify-content-between align-items-center">
+    <h4>Shipping address</h4>
+    <button
+      (click)="saveUserAddress()"
+      [disabled]="
+        !checkoutForm.get('addressForm').valid ||
+        !checkoutForm.get('addressForm').dirty
+      "
+      class="btn btn-outline-success mb-3"
+    >
+      Save as default address
+    </button>
+  </div> -->
 
-<div class="float-none d-flex justify-content-between flex-column flex-lg-row mg-5">
-    <button class="btn btn-outline-primary" routerLink="/basket">
-        <i class="fa fa-angle-left"></i> Back to Basket
-    </button>
-    <button class="btn btn-primary" cdkStepperNext>
-        Go to Delivery <i class="fa fa-angle-right"></i>
-    </button>
+<!-- <div class="col-6 form-group" *ngFor="let method of deliveryMethods">
+            <input type="radio"
+                id={{method.id}}
+                (click)="setShippingPrice(method)"
+                value={{method.id}}
+                formControlName="deliveryMethod"
+                class="custom-control-input"
+            >
+            <label for="{{method.id}}" class="custom-control-label">
+                <strong>{{method.shortName}} - {{method.price | currency}}</strong>
+                <br>
+                <span class="label-description">{{method.description}}</span>
+            </label>
+        </div> -->
+<div class="form-group" [formGroup]="checkoutForm">
+  <div formGroupName="addressForm">
+    <ng-select
+      [items]="deliveryMethods"
+      bindLabel="shortName"
+      bindValue="id"
+      [searchable]="false"
+      [clearable]="false"
+      formControlName="deliveryMethod"
+      [(ngModel)]="selectedValue"
+    ></ng-select>
+
+    <app-text-input
+      [label]="'Ім\'я'"
+      formControlName="firstName"
+    ></app-text-input>
+    <app-text-input
+      [label]="'Прізвище'"
+      formControlName="lastName"
+    ></app-text-input>
+    <app-text-input
+      [label]="'По-батькові'"
+      formControlName="surname"
+    ></app-text-input>
+    <app-text-input
+      [label]="'Номер телефону'"
+      formControlName="city"
+    ></app-text-input>
+    <!-- <app-text-input [label]="'State'" formControlName="state"></app-text-input>
+    <app-text-input
+      [label]="'Zip Code'"
+      formControlName="zipcode"
+    ></app-text-input> -->
+  </div>
+</div>
+<div class="stepper-buttons">
+  <button class="btn" routerLink="/basket">
+    <i class="fa fa-angle-left"></i> Back to Basket
+  </button>
+  <button class="btn" cdkStepperNext>
+    Go to Delivery <i class="fa fa-angle-right"></i>
+  </button>
 </div>
 
 <!-- <div class="mt-4" [formGroup]="checkoutForm">

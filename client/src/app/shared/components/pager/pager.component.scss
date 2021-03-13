@@ -1,43 +1,47 @@
 @import "/src/variables";
 
 ::ng-deep .product-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .page-item {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  .pagination-prev {
+    margin: 0 65px 0 0;
+  }
+  .pagination-next {
+    margin: 0 0 0 65px;
+  }
+
+  .page-item a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    color: $black;
+  }
 
-    .page-item {
-        margin: 0 15px;
-        cursor: pointer;
-    }
+  .page-link {
+    transition: color 0.3s ease;
+  }
 
-    .pagination-prev {
-        margin: 0 65px 0 0;
-    }
-    .pagination-next {
-        margin: 0 0 0 65px;
-    }
+  .page-link:hover,
+  .pagination-page.active .page-link {
+    color: $dark-pink;
+  }
 
-    .page-item a {
-        display: flex;
-        align-items: center;
-        color: $black;
-    }
+  .page-item.disabled .page-link:hover {
+    cursor: default;
+    color: $black;
+  }
 
-    .page-link {
-        transition: color 0.3s ease;
-    }
+  .page-item.disabled .page-link {
+    opacity: 0.5;
+  }
 
-    .page-link:hover,
-    .pagination-page.active .page-link {
-        color: $dark-pink;
-    }
-
-    .page-item.disabled .page-link:hover {
-        cursor: default;
-        color: $black;
-    }
-
-    .page-link {
-        font-size: 25px;
-    }
+  .page-link {
+    font-size: 25px;
+  }
 }

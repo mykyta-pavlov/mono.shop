@@ -44,11 +44,23 @@
                     </div>
                     <div class="specifications__right">
                         <label>Обрати розмір</label>
-                        <ng-select class="custom-select">
-                            <np-option [value]="'ok'">OK</np-option>
-                            <np-option [value]="'ok2'">OK2</np-option>
-                            <np-option [value]="'ok3'">OK3</np-option>
-                            <np-option [value]="'ok23'">OK23</np-option>
+                        <!-- <ng-select 
+                        [items]="selectOptions"
+                        bindLabel="name"
+                        bindValue="name" 
+                        [searchable]="false" 
+                        [clearable]="false"  
+                        [(ngModel)]="selectedValue"
+                        ></ng-select> -->
+                        <ng-select 
+                        [searchable]="false" 
+                        [clearable]="false"  
+                        [(ngModel)]="selectedValue"
+                        >
+                            <ng-option
+                            *ngFor="let option of selectOptions"
+                            [disabled]="!option.isAvailable"
+                            >{{option.name}}</ng-option>
                         </ng-select>
                     </div>
                 </div>

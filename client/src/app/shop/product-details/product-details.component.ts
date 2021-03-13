@@ -14,10 +14,21 @@ export class ProductDetailsComponent implements OnInit {
   product: IProduct;
   quantity = 1;
 
-  constructor(private shopService: ShopService,
-              private activatedRoute: ActivatedRoute,
-              private bcService: BreadcrumbService,
-              private basketService: BasketService) { }
+  selectedValue: string;
+  selectOptions = [
+    // { id: 1, name: "S" },
+    // { id: 2, name: "M" },
+    // { id: 3, name: "L" },
+    // { id: 4, name: "XL" },
+    // { id: 5, name: "XXL" },
+  ];
+
+  constructor(
+    private shopService: ShopService,
+    private activatedRoute: ActivatedRoute,
+    private bcService: BreadcrumbService,
+    private basketService: BasketService
+  ) {}
 
   ngOnInit(): void {
     this.bcService.set('@productDetails', ' ');
@@ -33,14 +44,31 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   loadProduct(): void {
-    this.shopService.getProduct(+this.activatedRoute.snapshot.paramMap.get('id')).subscribe(product => {
-      this.product = product;
-      this.bcService.set('@productDetails', product.name);
+    this.shopService
+      .getProduct(+this.activatedRoute.snapshot.paramMap.get('id'))
+      .subscribe(
+        (product) => {
+          let keys = Object.keys(product.sizesAvailable);
+          let crutchProduct = [];
+          keys.forEach((key) => {
+            crutchProduct.push({
+              name: key,
+              isAvailable: product.sizesAvailable[key],
+            });
+          });
+          this.selectOptions = crutchProduct;
+          this.selectedValue = crutchProduct[0].name; // TODO clear this pathetic crutch
 
-      this.verticalSliderLength = product.imageUrls.length;
-    }, error => {
-      console.log(error);
-    });
+          this.product = product;
+          this.bcService.set('@productDetails', product.name);
+
+          this.verticalSliderLength = product.imageUrls.length;
+          console.log(this.product);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   }
 
   readonly marginTopIndent = 149;
@@ -48,9 +76,8 @@ export class ProductDetailsComponent implements OnInit {
   verticalSliderLength;
 
   setSliderNumber(num: number): void {
-    if(!((num < 0) || num >= this.verticalSliderLength)) {
+    if (!(num < 0 || num >= this.verticalSliderLength)) {
       this.slideNumber = num;
     }
   }
-
 }

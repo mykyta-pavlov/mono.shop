@@ -22,23 +22,41 @@
     </div>
 </div> -->
 <section class="ordering">
-    <div class="wrapper">
-        <div class="ordering__left">
-            <app-stepper [linearModeSelected]="false" #appStepper>
-                <cdk-step [label]="'Address'" [completed]="(checkoutForm.get('addressForm')).valid">
-                    <app-checkout-address [checkoutForm]="checkoutForm"></app-checkout-address>
-                </cdk-step>
-                <cdk-step [label]="'Delivery'" [completed]="(checkoutForm.get('deliveryForm')).valid">
+  <div class="wrapper">
+    <div class="ordering__left">
+      <h3>Доставка</h3>
+      <div class="hr"></div>
+      <app-stepper [linearModeSelected]="false" #appStepper>
+        <cdk-step
+          [label]="'Address'"
+          [completed]="checkoutForm.get('addressForm').valid"
+        >
+          <app-checkout-address
+            [checkoutForm]="checkoutForm"
+          ></app-checkout-address>
+        </cdk-step>
+        <!-- <cdk-step [label]="'Delivery'" [completed]="(checkoutForm.get('deliveryForm')).valid">
                     <app-checkout-delivery [checkoutForm]="checkoutForm"></app-checkout-delivery>
-                </cdk-step>
-                <cdk-step [label]="'Review'">
-                    <app-checkout-review></app-checkout-review>
-                </cdk-step>
-                <cdk-step [label]="'Payment'">
-                    <app-checkout-payment [checkoutForm]="checkoutForm"></app-checkout-payment>
-                </cdk-step>
-            </app-stepper>
-            <!-- <h3>Доставка</h3>
+                </cdk-step> -->
+        <cdk-step [label]="'Review'">
+          <app-checkout-review></app-checkout-review>
+        </cdk-step>
+        <cdk-step [label]="'Payment'">
+          <app-checkout-payment
+            [checkoutForm]="checkoutForm"
+          ></app-checkout-payment>
+        </cdk-step>
+      </app-stepper>
+    </div>
+    <div class="ordering__right">
+      <h3>Підсумки</h3>
+      <div class="hr"></div>
+      <app-order-totals></app-order-totals>
+    </div>
+  </div>
+</section>
+
+<!-- <h3>Доставка</h3>
             <div class="hr"></div>
             <form class="ordering__form" action="#">
                 <table class="ordering__table form__table">
@@ -99,11 +117,3 @@
                     <input type="submit" class="btn" value="Перейти до оплати">
                 </div>
             </form> -->
-        </div>
-        <div class="ordering__right">
-            <h3>Підсумки</h3>
-            <div class="hr"></div>
-            <app-order-totals></app-order-totals>
-        </div>
-    </div>
-</section>

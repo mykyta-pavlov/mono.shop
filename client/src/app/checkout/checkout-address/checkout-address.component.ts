@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AccountService } from 'src/app/account/account.service';
+import { BasketService } from 'src/app/basket/basket.service';
+import { IDeliveryMethod } from 'src/app/shared/models/deliveryMethod';
+import { CheckoutService } from '../checkout.service';
 
 @Component({
   selector: 'app-checkout-address',
@@ -10,10 +13,24 @@ import { AccountService } from 'src/app/account/account.service';
 })
 export class CheckoutAddressComponent implements OnInit {
   @Input() checkoutForm: FormGroup;
+  deliveryMethods: IDeliveryMethod[];
+  selectedValue: number = 1;
 
-  constructor(private accountService: AccountService, private toastr: ToastrService) { }
+  constructor(private accountService: AccountService, 
+    private toastr: ToastrService, 
+    private checkoutService: CheckoutService,
+    private basketService: BasketService) { }
 
   ngOnInit(): void {
+    console.log(this.accountService);
+    console.log(this.toastr);
+    console.log(this.checkoutService);
+    console.log(this.basketService);
+    this.checkoutService.getDeliveryMethods().subscribe((dm: IDeliveryMethod[]) => {
+      this.deliveryMethods = dm;
+    }, error => {
+      console.log(error);
+    });
   }
 
   saveUserAddress(): void {
@@ -23,6 +40,10 @@ export class CheckoutAddressComponent implements OnInit {
       this.toastr.error(error.message);
       console.log(error);
     });
+  }
+
+  setShippingPrice(deliveryMethod: IDeliveryMethod): void {
+    this.basketService.setShippingPrice(deliveryMethod);
   }
 
 }
