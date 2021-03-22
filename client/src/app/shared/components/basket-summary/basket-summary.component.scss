@@ -1,0 +1,58 @@
+@import "/src/variables";
+
+.basket__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.basket__table {
+    td {
+        padding: 0 20px 22px 0;
+        font-size: 16px;
+        color: $black;
+    }
+
+    tr td:first-child {
+        font-weight: 500;
+    }
+}
+
+.basket-item__left {
+    margin-right: 65px;
+    width: 50%;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        max-width: 130px;
+        max-height: 173px;
+        margin-bottom: 12px;
+    }
+
+    label {
+        font-size: 16px;
+        color: $black;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+.basket-item__right {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.basket-item {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.basket-item:last-child {
+    margin-bottom: 0;
+}

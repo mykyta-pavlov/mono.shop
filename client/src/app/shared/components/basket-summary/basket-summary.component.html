@@ -1,5 +1,46 @@
 <ng-container *ngIf="basket$ | async">
-    <div class="table-responsive">
+    <ul class="basket__list">
+        <li class="basket-item" *ngFor="let item of (basket$ | async).items">
+            <div class="basket-item__left">
+                <a routerLink="/shop/{{item.id}}">
+                    <img src="{{item.pictureUrl}}" alt="{{item.productName}}">
+                    <label>{{item.productName}}</label>
+                </a>
+            </div>
+            <div class="basket-item__right">
+                <table class="basket__table">
+                    <tbody>
+                        <tr>
+                            <td>Ціна:</td>
+                            <td>{{item.price | currency}}</td>
+                        </tr>
+                        <tr>
+                            <td>Кількість:</td>
+                            <td>
+                                <app-number-increment 
+                                [quantity]="item.quantity"
+                                (changeEvent)="changeItemQuantity(item, $event)"
+                                *ngIf="isBasket"
+                                ></app-number-increment>                                
+                                <ng-container *ngIf="!isBasket">{{item.quantity}}</ng-container>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Сума:</td>
+                            <td>{{item.price * item.quantity | currency}}</td>
+                        </tr>
+                        <tr *ngIf="isBasket">
+                            <button 
+                                (click)="removeBasketItem(item)" 
+                                class="btn btn-danger">Видалити</button>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+</ng-container>
+    <!-- <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
@@ -54,5 +95,4 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-</ng-container>
+    </div> -->

@@ -4,13 +4,13 @@ namespace Core.Entities.OrderAggregate
 {
     public enum OrderStatus
     {
-        [EnumMember(Value = "Pending")]
+        [EnumMember(Value = "В очікуванні")]
         Pending,
 
-        [EnumMember(Value = "Payment Received")]
+        [EnumMember(Value = "Платіж отримано")]
         PaymentReceived,
 
-        [EnumMember(Value = "Payment Failed")]
+        [EnumMember(Value = "Платіж скасовано")]
         PaymentFailed
     }
 }

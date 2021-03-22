@@ -3,11 +3,35 @@ import { IProduct } from '../shared/models/product';
 import { IType } from '../shared/models/productType';
 import { ShopService } from './shop.service';
 import { ShopParams } from '../shared/models/shopParams';
+import {
+  AUTO_STYLE,
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+} from '@angular/animations';
+
+const DEFAULT_DURATION = 300;
 
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss']
+  styleUrls: ['./shop.component.scss'],
+  animations: [
+    trigger('collapse', [
+      state('false', style({ height: AUTO_STYLE, visibility: AUTO_STYLE })),
+      state('true', style({ height: '0', visibility: 'hidden' })),
+      transition('false => true', animate(DEFAULT_DURATION + 'ms ease-out')),
+      transition('true => false', animate(DEFAULT_DURATION + 'ms ease-in'))
+    ]),
+    trigger('rotate', [
+      state('false', style({ transform: 'rotate(0)' })),
+      state('true', style({ transform: 'rotate(-180deg)' })),
+      transition('false => true', animate(DEFAULT_DURATION + 'ms ease-out')),
+      transition('true => false', animate(DEFAULT_DURATION + 'ms ease-in'))
+    ]),
+  ]
 })
 export class ShopComponent implements OnInit {
   @ViewChild('search', {static: false}) searchTerm: ElementRef;
@@ -16,9 +40,9 @@ export class ShopComponent implements OnInit {
   shopParams = new ShopParams();
   totalCount: number;
   sortOptions = [
-    {name: 'Alphabetical', value: 'name'},
-    {name: 'Price: Low to High', value: 'priceAsc'},
-    {name: 'Price: High to Low', value: 'priceDesc'}
+    {name: 'За алфавітом', value: 'name'},
+    {name: 'Ціна: від низької до високої', value: 'priceAsc'},
+    {name: 'Ціна: від високої до низької', value: 'priceDesc'}
   ];
 
   constructor(private shopService: ShopService) { }
@@ -26,6 +50,12 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     this.getProducts();
     this.getTypes();
+  }
+
+  collapsed = true;
+
+  toggleCollapse() {
+    this.collapsed = !this.collapsed;
   }
 
   getProducts(): void {
@@ -54,6 +84,7 @@ export class ShopComponent implements OnInit {
   }
 
   onTypeSelected(typeId: number): void {
+    console.log(typeId);
     this.shopParams.typeId = typeId;
     this.shopParams.pageNumber = 1;
     this.getProducts();

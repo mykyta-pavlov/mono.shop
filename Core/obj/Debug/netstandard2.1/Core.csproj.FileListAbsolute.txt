@@ -1,9 +1,0 @@
-C:\Users\mykyt\source\capriza.shop\Core\bin\Debug\netstandard2.1\Core.deps.json
-C:\Users\mykyt\source\capriza.shop\Core\bin\Debug\netstandard2.1\Core.dll
-C:\Users\mykyt\source\capriza.shop\Core\bin\Debug\netstandard2.1\Core.pdb
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.dll
-C:\Users\mykyt\source\capriza.shop\Core\obj\Debug\netstandard2.1\Core.pdb

@@ -1,28 +1,146 @@
-.cart-no {
-    position: absolute;
-    min-height: 25px;
-    min-width: 25px;
-    border-radius: 50%;
-    font-size: 1em;
-    background: blue;
-    color: white;
-    text-align: center;
-    top: -12px;
-    right: 32px;
+@import "/src/variables";
+
+.main_navigation {
+  background-color: $white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
-a {
-    text-decoration: none;
-    color: #343a40;
-
-    &.active {
-        color: orange;
-    }
+.main_navigation .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-    cursor: pointer;
-    &:focus {
-        outline: none;
+.main_page-list {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  margin-right: 65px;
+
+  li {
+    margin-right: 65px;
+
+    a {
+      color: $black;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
     }
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1280px) {
+    // li {
+    //     margin-right: 30px;
+    // }
+    // TODO: make page list fit
+  }
+}
+
+.user-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  padding-right: 65px;
+
+  a {
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.user-links li {
+  margin-left: 65px;
+}
+
+.user-links__dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 2px;
+  z-index: 1;
+  padding: 5px;
+  width: 100%;
+  right: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 15px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.dropdown-divider {
+  margin: 3px 0;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  color: $black;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown-button svg {
+  width: 17px;
+  height: 19px;
+  margin-left: 5px;
+}
+
+.dropdown-button:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 5px;
+    width: 18px;
+    height: 16px;
+  }
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    padding: 0 12px;
+  }
+
+  .hr {
+    margin: 5px 0;
+  }
+}
+
+.main_page-list li a,
+.basket .basket__hover,
+.signup a {
+  transition: color 0.3s ease;
+}
+
+.main_page-list li a:hover,
+.basket:hover .basket__hover,
+.signup a:hover {
+  color: $dark-pink;
 }

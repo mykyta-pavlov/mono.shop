@@ -1,4 +1,26 @@
-<div class="container mt-2">
+<section class="basket-section">
+    <div *ngIf="(basket$ | async) === null">
+        <p>There are no items in your basket</p>
+    </div>
+    <div *ngIf="(basket$ | async) as basket" class="wrapper">
+        <div class="basket__left">
+            <h3>Товари у кошику</h3>
+            <div class="hr"></div>
+            <app-basket-summary
+                (changeEvent)="emitQuantity($event)"
+                (remove)="removeBasketItem($event)"
+            ></app-basket-summary>
+        </div>
+        <div class="basket__right">
+            <h3>Підсумки</h3>
+            <div class="hr"></div>
+            <app-order-totals></app-order-totals>
+            <p class="ghost-text">Зверніть увагу, вартість доставки з'явиться при оформленні замовлення на наступному етапі.</p>
+            <a routerLink="/checkout" class="btn">Оформити замовлення</a>
+        </div>
+    </div>
+</section>
+<!-- <div class="container mt-2">
     <div *ngIf="(basket$ | async) === null">
         <p>There are no items in your basket</p>
     </div>
@@ -27,4 +49,4 @@
         </div>
     </div>
 </div>
-
+ -->

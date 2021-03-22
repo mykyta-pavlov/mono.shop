@@ -55,21 +55,14 @@ export class BasketService {
     this.setBasket(basket);
   }
 
-  incrementItemQuantity(item: IBasketItem): void {
-    const basket = this.getCurrentBasketValue();
-    const foundItemIndex = basket.items.findIndex(x => x.id === item.id);
-    basket.items[foundItemIndex].quantity++;
-    this.setBasket(basket);
-  }
-
-  decrementItemQuantity(item: IBasketItem): void {
-    const basket = this.getCurrentBasketValue();
-    const foundItemIndex = basket.items.findIndex(x => x.id === item.id);
-    if (basket.items[foundItemIndex].quantity > 1) {
-      basket.items[foundItemIndex].quantity--;
+  setItemQuantity(item: IBasketItem, quantity: number): void {
+    if (quantity >= 1 && quantity <= 5) {
+      const basket = this.getCurrentBasketValue();
+      const foundItemIndex = basket.items.findIndex(x => x.id === item.id);
+      basket.items[foundItemIndex].quantity = quantity;
       this.setBasket(basket);
     } else {
-      this.removeItemFromBasket(item);
+      console.error(); // TODO something with this
     }
   }
 
@@ -131,7 +124,7 @@ export class BasketService {
       id: item.id,
       productName: item.name,
       price: item.price,
-      pictureUrl: item.pictureUrl,
+      pictureUrl: item.thumbnailUrl,
       quantity,
       type: item.productType
     };

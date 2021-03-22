@@ -1,16 +1,50 @@
-<carousel>
-    <slide>
-        <img src="assets/images/hero1.jpg" alt="first slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-        <img src="assets/images/hero2.jpg" alt="first slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-        <img src="assets/images/hero3.jpg" alt="first slide" style="display: block; width: 100%;">
-    </slide>
-</carousel>
-<section class="featured">
-    <div class="d-flex justify-content-center pt-4">
-        <h1>Welcome to the Shop!</h1>
+<header class="header">
+    <div class="header-background-image">
+        <img src="./assets/images/header-background.png" alt="header background image">
+    </div>
+    <div class="wrapper">
+        <div class="header-title">
+            <h1>Capriza Shop</h1>
+        </div>
+        <button (click)="scrollTo(assortment, 1200)" class="header-arrow">
+            <img src="./assets/images/icons/keyboard_arrow_down-24px.svg" alt="arrow down">
+        </button>
+    </div>
+</header>
+<!-- TODO move this to its component -->
+<section #assortment class="assortment">
+    <div class="wrapper">
+        <div class="assortment_info-blocks">
+            <div class="info-block-image">
+                <img src="./assets/images/assortment1.jpg" 
+                alt="assortment">
+            </div>
+            <div class="info-block-text">
+                <div class="info-block-green">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue, sapien vel facilisis lacinia, leo nibh placerat ex, ac scelerisque ante odio nec orci.</p>
+                </div>
+            </div>
+            <div class="info-block-text">
+                <div class="info-block-red">
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue, sapien vel facilisis lacinia, leo nibh placerat ex, ac scelerisque ante odio nec orci.</p>
+                </div>
+            </div>
+            <div class="info-block-image">
+                <img src="./assets/images/assortment2.jpg" 
+                alt="assortment">
+            </div>
+        </div>
+        <div class="assortment_navigation">
+            <h3>Подивіться весь асортимент</h3>
+            <nav>
+                <ul class="assortment_list">
+                    <li><a routerLink="/shop">аксесуари</a></li>
+                    <li><a routerLink="/shop">жіночий одяг</a></li>
+                    <li><a routerLink="/shop">дитячий одяг</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </section>

@@ -13,6 +13,7 @@ import { IUser } from 'src/app/shared/models/user';
 export class NavBarComponent implements OnInit {
   basket$: Observable<IBasket>;
   currentUser$: Observable<IUser>;
+  isOpenedMenu: boolean = false;
 
   constructor(private basketService: BasketService, private accountService: AccountService) { }
 
@@ -22,6 +23,7 @@ export class NavBarComponent implements OnInit {
   }
 
   logout(): void {
+    this.isOpenedMenu = false;
     this.accountService.logout();
   }
 

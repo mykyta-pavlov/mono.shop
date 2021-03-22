@@ -1,0 +1,64 @@
+@import "/src/variables";
+
+.orders {
+  background-color: $white;
+  min-height: 674px;
+
+  .wrapper {
+    padding: 65px 0;
+  }
+}
+
+.orders__table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th,
+td {
+  padding: 0 65px;
+  outline: none;
+}
+
+.orders__thead {
+  tr {
+    border-bottom: 1px solid black;
+
+    th {
+      font-size: 25px;
+      font-weight: 500;
+      text-align: center;
+      color: $black;
+      padding-bottom: 10px;
+    }
+  }
+}
+.orders__tbody {
+  tr {
+    outline: none;
+    cursor: pointer;
+    td {
+      font-size: 16px;
+      text-align: center;
+      color: $black;
+      padding: 10px 0;
+      transition: color 0.3s ease;
+    }
+
+    td:first-child {
+      font-weight: 500;
+    }
+  }
+
+  tr:hover {
+    td {
+      color: $dark-pink;
+    }
+  }
+}
+.orders__tbody::before {
+  content: "@";
+  display: block;
+  line-height: 25px;
+  text-indent: -99999px;
+}

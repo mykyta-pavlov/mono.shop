@@ -15,15 +15,11 @@ namespace API.Dtos
         public decimal Price { get; set; }
 
         [Required]
-        [Range(1, double.MaxValue, ErrorMessage = "Quantity must be at least 1")]
+        [Range(1, 5, ErrorMessage = "Максимальна кількість товарів дорівнює 5")]
         public int Quantity { get; set; }
 
         [Required]
         public string PictureUrl { get; set; }
-        
-        //TODO: Remove brand property
-        [Required]
-        public string Brand { get; set; }
 
         [Required]
         public string Type { get; set; }

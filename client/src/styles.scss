@@ -1,16 +1,188 @@
-/* You can add global styles to this file, and also import other style files */
+// #region font-face
+$fonts_path: "assets/fonts/";
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Thin.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-ExtraLight.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url($fonts_path+'Montserrat-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+// #endregion
 
-.xng-breadcrumb-root {
-    padding: 8px 16px;
-    display: inline;
-    border-radius: 0;
+@import "/src/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-label.xng-breadcrumb-trail {
-    margin-bottom: 0;
-    color: orange;
+body {
+    background-color: $dark-gray;
 }
 
-.xng-breadcrumb-separator {
-    padding: 0 0;
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+input, button {
+    outline: none;
+    background-color: $white;
+    border: 0;
+}
+
+label {
+    user-select: none;
+}
+
+.wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: solid 1px $black;
+    background-color: $white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: $black;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: $pink;
+}
+
+.btn.btn-danger {
+    color: red;
+    border-color: red;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hr {
+    width: 100%;
+    border-top: 1px solid $black;
+}
+
+.ng-select {
+    .ng-value-container {
+        padding: 3px 10px;
+        border: solid 1px $black;
+        background-color: $white;
+        cursor: pointer !important;
+        font-size: 16px;
+        font-weight: 600;
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+
+        .ng-placeholder {
+            display: none;
+        }
+    }
+
+    .ng-value-container::after {
+        content: url(assets/images/icons/chevron-down-solid.svg);
+        width: 11px;
+        height: 9px;
+    }
+
+    .ng-dropdown-panel-items {
+        border: solid 1px $black;
+        background-color: $white;
+
+        .ng-option {
+            padding: 3px 10px;
+            font-size: 16px;
+            color: $black;
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ng-option-selected,
+        .ng-option-marked {
+            background-color: #f9f9f9;
+        }
+
+        .ng-option-selected:after {
+            content: url(assets/images/icons/check-green.svg);
+            line-height: 0;
+        }
+    }
+}
+
+.ng-select-opened {
+    .ng-value-container::after {
+        content: url(assets/images/icons/chevron-up-solid.svg);
+    }
 }

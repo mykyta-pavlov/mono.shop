@@ -1,6 +1,79 @@
-<div class="container mt-3">
+<section class="filters">
+    <div class="filters-top">
+        <div class="wrapper">
+            <button (click)="toggleCollapse()">
+                <p>Фільтри</p>
+                <img [@rotate]="collapsed" 
+                src="./assets/images/icons/chevron-up-solid.svg" alt="chevron up" />
+            </button>
+        </div>
+    </div>
+    <div [@collapse]="collapsed" class="filters-bottom">
+        <div class="wrapper">
+            <ul class="filter_headings">
+                <li class="filter_heading">
+                    <h3>Тип товару</h3>
+                    <ul class="filter_categories">
+                        <li *ngFor="let type of types; let i = index"
+                        class="filter"
+                        [class.active]="type.id === this.shopParams.typeId"
+                        [value]="type.id">
+                            <label>
+                                <input 
+                                    (change)="onTypeSelected(type.id)" 
+                                    type="radio" 
+                                    name="type"
+                                    [checked]="i===0"
+                                />
+                                <span class="radio"></span>
+                                <p>{{type.name}}</p>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filter_heading">
+                    <h3>Ціна товару</h3>
+                </li>
+                <li class="filter_heading">
+                    <h3>Сортування</h3>
+                    <ul class="filter_categories">
+                        <li class="filter"
+                        *ngFor="let sort of sortOptions; let i = index">
+                            <label>
+                                <input
+                                [value]="sort.value" 
+                                (change)="onSortSelected($event.target.value)" 
+                                class="fas fa-check-square" 
+                                type="radio" 
+                                name="sort"
+                                [checked]="i===0"
+                                >
+                                <span class="radio"></span>
+                                <p>{{sort.name}}</p>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="shop">
+    <div class="wrapper">
+        <ul class="product-list">
+            <li class="product-item" *ngFor="let item of products">
+                <app-product-item [product]="item"></app-product-item>
+            </li>
+        </ul>
+        <app-pager *ngIf="totalCount > 0"
+            [pageSize]="shopParams.pageSize"
+            [totalCount]="totalCount"
+            (pageChanged)="onPageChanged($event)"
+        ></app-pager>
+    </div>
+</section>
+<!-- <div class="container mt-3">
     <div class="row">
-
         <section class="col-3">
             <ng-container *ngIf="types">
                 <h5 class="text-warning ml-3 mt-4 mb-3">Sort</h5>
@@ -13,7 +86,7 @@
                 </select>
 
                   <h5 class="text-warning ml-3">Types</h5>
-                  <ul class="list-group my-3" style="9cursor: pointer;">
+                  <ul class="list-group my-3" style="cursor: pointer;">
                     <li class="list-group-item"
                         *ngFor="let type of types"
                         [class.active]="type.id === this.shopParams.typeId"
@@ -54,4 +127,4 @@
             </div>
         </section>
     </div>
-</div>
+</div> -->

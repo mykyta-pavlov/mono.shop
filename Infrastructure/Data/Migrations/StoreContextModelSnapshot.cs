@@ -261,13 +261,13 @@ namespace Infrastructure.Data.Migrations
                             b1.Property<int>("OrderItemId")
                                 .HasColumnType("INTEGER");
 
-                            b1.Property<string>("PictureUrl")
-                                .HasColumnType("TEXT");
-
                             b1.Property<int>("ProductItemId")
                                 .HasColumnType("INTEGER");
 
                             b1.Property<string>("ProductName")
+                                .HasColumnType("TEXT");
+
+                            b1.Property<string>("ThumbnailUrl")
                                 .HasColumnType("TEXT");
 
                             b1.HasKey("OrderItemId");
