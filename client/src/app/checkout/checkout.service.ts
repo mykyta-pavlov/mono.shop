@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IDeliveryMethod } from '../shared/models/deliveryMethod';
 import { IOrderToCreate } from '../shared/models/order';
+import set = Reflect.set;
+import {ISettlement} from '../shared/models/settlements';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,10 @@ export class CheckoutService {
 
   createOrder(order: IOrderToCreate): Observable<object> {
     return this.http.post(this.baseUrl + 'orders', order);
+  }
+
+  getSettlements(settlement: string): Observable<ISettlement[]> {
+    return this.http.get<ISettlement[]>(this.baseUrl + 'novaposhta/searchsettlements/' + settlement);
   }
 
   getDeliveryMethods(): Observable<IDeliveryMethod[]> {

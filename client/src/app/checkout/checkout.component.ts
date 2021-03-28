@@ -22,10 +22,10 @@ export class CheckoutComponent implements OnInit {
       addressForm: this.fb.group({
         firstName: [null, Validators.required],
         lastName: [null, Validators.required],
-        street: [null, Validators.required],
-        city: [null, Validators.required],
-        state: [null, Validators.required],
-        zipcode: [null, Validators.required],
+        // street: [null, Validators.required],
+        // city: [null, Validators.required],
+        // state: [null, Validators.required],
+        // zipcode: [null, Validators.required],
         deliveryMethod: [null, Validators.required],
       }),
       // deliveryForm: this.fb.group({

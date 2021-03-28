@@ -1,0 +1,4 @@
+dotnet ef database drop -p .\Infrastructure\ -s API -c StoreContext
+dotnet ef migrations remove -p .\Infrastructure\ -s .\API\ -c StoreContext
+dotnet ef migrations add <MigrationName> -s .\API\ -o Data/Migrations -c StoreContext -p .\Infrastructure\
+dotnet ef database update -p .\Infrastructure\ -s .\API\ -c StoreContext

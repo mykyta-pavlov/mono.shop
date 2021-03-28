@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Data.Migrations
 {
-    public partial class UpdateBasketItemDTO : Migration
+    public partial class UpadtePrductItemOrderModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

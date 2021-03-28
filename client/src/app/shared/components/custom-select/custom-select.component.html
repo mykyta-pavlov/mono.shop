@@ -1,0 +1,14 @@
+<div class="custom-select" [ngClass]="true ? 'checkout-select' : ''">
+  <label class="select-label">{{label}}</label>
+  <ng-select
+    [items]="items"
+    bindLabel="present"
+    bindValue="deliveryCity"
+    placeholder="{{label}}"
+    [clearable]="true"
+    formControlName="deliveryMethod"
+    ngModel="selectedValue"
+  ></ng-select>
+  <span class="checkout-select__error"
+    >{{label}} необхідно</span>
+</div>

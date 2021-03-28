@@ -5,6 +5,9 @@ import { AccountService } from 'src/app/account/account.service';
 import { BasketService } from 'src/app/basket/basket.service';
 import { IDeliveryMethod } from 'src/app/shared/models/deliveryMethod';
 import { CheckoutService } from '../checkout.service';
+import {Observable, Subject} from 'rxjs';
+import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {ISettlement} from '../../shared/models/settlements';
 
 @Component({
   selector: 'app-checkout-address',
@@ -14,23 +17,34 @@ import { CheckoutService } from '../checkout.service';
 export class CheckoutAddressComponent implements OnInit {
   @Input() checkoutForm: FormGroup;
   deliveryMethods: IDeliveryMethod[];
-  selectedValue: number = 1;
+  selectedValue = 1;
+  settlements$: Observable<ISettlement[]>;
+  private searchSettlement$ = new Subject<string>();
 
-  constructor(private accountService: AccountService, 
-    private toastr: ToastrService, 
-    private checkoutService: CheckoutService,
-    private basketService: BasketService) { }
+  constructor(private accountService: AccountService,
+              private toastr: ToastrService,
+              private checkoutService: CheckoutService,
+              private basketService: BasketService) { }
 
   ngOnInit(): void {
-    console.log(this.accountService);
-    console.log(this.toastr);
-    console.log(this.checkoutService);
-    console.log(this.basketService);
+    this.settlements$ = this.searchSettlement$.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      switchMap(settlement =>
+        this.checkoutService.getSettlements(settlement))
+    );
+
     this.checkoutService.getDeliveryMethods().subscribe((dm: IDeliveryMethod[]) => {
       this.deliveryMethods = dm;
     }, error => {
       console.log(error);
     });
+  }
+
+  getSettlements(settlement: string): void {
+    if (settlement) {
+      this.searchSettlement$.next(settlement);
+    }
   }
 
   saveUserAddress(): void {
@@ -46,4 +60,7 @@ export class CheckoutAddressComponent implements OnInit {
     this.basketService.setShippingPrice(deliveryMethod);
   }
 
+  getValue(target: EventTarget): string {
+    return (target as HTMLInputElement).value;
+  }
 }

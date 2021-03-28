@@ -14,11 +14,11 @@ import { BasketSummaryComponent } from './components/basket-summary/basket-summa
 import { RouterModule } from '@angular/router';
 import { NumberIncrementComponent } from './components/number-increment/number-increment.component';
 import { LogoComponent } from './components/logo/logo.component';
-import { SelectComponent } from './components/select/select.component';
-
+import { CustomSelectComponent } from './components/custom-select/custom-select.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent, NumberIncrementComponent, LogoComponent, SelectComponent],
+  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent, NumberIncrementComponent, LogoComponent, CustomSelectComponent],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
@@ -26,7 +26,8 @@ import { SelectComponent } from './components/select/select.component';
     BsDropdownModule.forRoot(),
     ReactiveFormsModule,
     CdkStepperModule,
-    RouterModule
+    RouterModule,
+    NgSelectModule,
   ],
   exports: [
     PaginationModule,
@@ -42,7 +43,7 @@ import { SelectComponent } from './components/select/select.component';
     BasketSummaryComponent,
     NumberIncrementComponent,
     LogoComponent,
-    SelectComponent
+    CustomSelectComponent
   ]
 })
 export class SharedModule { }

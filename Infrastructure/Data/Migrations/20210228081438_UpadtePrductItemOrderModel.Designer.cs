@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20210301180802_UpdateBasketItemDTO")]
-    partial class UpdateBasketItemDTO
+    [Migration("20210228081438_UpadtePrductItemOrderModel")]
+    partial class UpadtePrductItemOrderModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
