@@ -28,7 +28,7 @@
         </div> -->
 <div class="form-group" [formGroup]="checkoutForm">
   <div formGroupName="addressForm">
-<!--    <ng-select
+    <!--    <ng-select
       [items]="deliveryMethods"
       bindLabel="shortName"
       bindValue="id"
@@ -47,11 +47,12 @@
       class="select-settlement"
     ></ng-select> -->
 
-    <app-custom-select 
-      label="Спосіб доставки" 
+    <app-custom-select
+      label="Спосіб доставки"
       [items]="settlements$ | async"
+      (keyupEvent)="getSettlements(getValue($event))"
       formControlName=""
-      ></app-custom-select>
+    ></app-custom-select>
 
     <app-text-input
       [label]="'Ім\'я'"

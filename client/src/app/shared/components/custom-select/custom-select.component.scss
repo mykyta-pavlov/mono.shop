@@ -10,10 +10,20 @@
       width: 100%;
       font-size: 16px;
     }
-    .ng-value-container,
+    .ng-select-container,
     .ng-dropdown-panel-items {
       border: solid 1px $black;
       border-radius: 2px;
+    }
+
+    .ng-clear-wrapper {
+      width: 22px;
+      display: flex;
+      align-items: center;
+
+      .ng-clear {
+        font-size: 25px;
+      }
     }
   }
 }
@@ -31,7 +41,6 @@
   .ng-select {
     .ng-value-container {
       padding: 3px 10px;
-      border: solid 1px $black;
       background-color: $white;
       cursor: pointer !important;
       font-size: 16px;
@@ -42,14 +51,28 @@
     }
 
     .ng-value-container::after {
-      content: url("../../../../assets/images/icons/chevron-down-solid.svg");
-      width: 11px;
-      height: 9px;
+      content: "\00A0";
+    }
+
+    // TODO: remove
+    // .ng-value-container::after {
+    //   content: url("../../../../assets/images/icons/chevron-down-solid.svg");
+    //   width: 11px;
+    //   height: 9px;
+    // }
+
+    .ng-has-value .ng-placeholder {
+      display: none;
     }
 
     .ng-placeholder {
       color: #999;
       font-weight: 400;
+    }
+
+    .ng-input {
+      padding-left: inherit;
+      padding-right: inherit;
     }
 
     .ng-dropdown-panel-items {
@@ -77,11 +100,12 @@
     }
   }
 
-  .ng-select-opened {
-    .ng-value-container::after {
-      content: url("../../../../assets/images/icons/chevron-up-solid.svg");
-    }
-  }
+  // TODO: remove
+  // .ng-select-opened {
+  //   .ng-value-container::after {
+  //     content: url("../../../../assets/images/icons/chevron-up-solid.svg");
+  //   }
+  // }
 }
 .checkout-select__error {
   position: absolute;

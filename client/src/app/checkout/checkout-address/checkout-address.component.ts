@@ -5,14 +5,14 @@ import { AccountService } from 'src/app/account/account.service';
 import { BasketService } from 'src/app/basket/basket.service';
 import { IDeliveryMethod } from 'src/app/shared/models/deliveryMethod';
 import { CheckoutService } from '../checkout.service';
-import {Observable, Subject} from 'rxjs';
-import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
-import {ISettlement} from '../../shared/models/settlements';
+import { Observable, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { ISettlement } from '../../shared/models/settlements';
 
 @Component({
   selector: 'app-checkout-address',
   templateUrl: './checkout-address.component.html',
-  styleUrls: ['./checkout-address.component.scss']
+  styleUrls: ['./checkout-address.component.scss'],
 })
 export class CheckoutAddressComponent implements OnInit {
   @Input() checkoutForm: FormGroup;
@@ -21,24 +21,28 @@ export class CheckoutAddressComponent implements OnInit {
   settlements$: Observable<ISettlement[]>;
   private searchSettlement$ = new Subject<string>();
 
-  constructor(private accountService: AccountService,
-              private toastr: ToastrService,
-              private checkoutService: CheckoutService,
-              private basketService: BasketService) { }
+  constructor(
+    private accountService: AccountService,
+    private toastr: ToastrService,
+    private checkoutService: CheckoutService,
+    private basketService: BasketService
+  ) {}
 
   ngOnInit(): void {
     this.settlements$ = this.searchSettlement$.pipe(
       debounceTime(500),
       distinctUntilChanged(),
-      switchMap(settlement =>
-        this.checkoutService.getSettlements(settlement))
+      switchMap((settlement) => this.checkoutService.getSettlements(settlement))
     );
 
-    this.checkoutService.getDeliveryMethods().subscribe((dm: IDeliveryMethod[]) => {
-      this.deliveryMethods = dm;
-    }, error => {
-      console.log(error);
-    });
+    this.checkoutService.getDeliveryMethods().subscribe(
+      (dm: IDeliveryMethod[]) => {
+        this.deliveryMethods = dm;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   getSettlements(settlement: string): void {
@@ -48,12 +52,17 @@ export class CheckoutAddressComponent implements OnInit {
   }
 
   saveUserAddress(): void {
-    this.accountService.updateUserAddress(this.checkoutForm.get('addressForm').value).subscribe(() => {
-      this.toastr.success('Address saved');
-    }, error => {
-      this.toastr.error(error.message);
-      console.log(error);
-    });
+    this.accountService
+      .updateUserAddress(this.checkoutForm.get('addressForm').value)
+      .subscribe(
+        () => {
+          this.toastr.success('Address saved');
+        },
+        (error) => {
+          this.toastr.error(error.message);
+          console.log(error);
+        }
+      );
   }
 
   setShippingPrice(deliveryMethod: IDeliveryMethod): void {
