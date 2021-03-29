@@ -25,6 +25,11 @@ namespace API.Controllers
         {
             return await _npService.SearchSettlements(settlement);
         }
-        
+
+        [HttpGet("warehouses/{cityRef}")]
+        public async Task<ActionResult<List<GetWarehousesResponse.DataArray>>> GetWarehouses(string cityRef)
+        {
+            return await _npService.GetWarehouses(cityRef);
+        }
     }
 }

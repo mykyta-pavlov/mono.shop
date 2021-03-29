@@ -60,5 +60,43 @@ namespace Infrastructure.Services
                 }
             }
         }
+
+        public async Task<List<GetWarehousesResponse.DataArray>> GetWarehouses(string cityRef)
+        {
+            List<GetWarehousesResponse.DataArray> warehouses = new List<GetWarehousesResponse.DataArray>();
+            
+            const string url = "http://api.novaposhta.ua/v2.0/json/AddressGeneral/getWarehouses/";
+
+            var npRequest = new GetWarehousesRequest(
+                "AddressGeneral",
+                "getWarehouses",
+                _config["NovaPoshtaKey"],
+                cityRef
+            );
+            
+            var json = JsonSerializer.Serialize(npRequest);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            
+            ApiHelper.InitializeClient();
+            
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync(url, data))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    GetWarehousesResponse npResponse = await response.Content.ReadAsAsync<GetWarehousesResponse>();
+
+                    foreach (var res in npResponse.Data)
+                    {
+                        warehouses.Add(res);
+                    }
+                    
+                    return warehouses;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }
