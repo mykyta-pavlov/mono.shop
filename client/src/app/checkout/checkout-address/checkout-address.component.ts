@@ -8,6 +8,7 @@ import { CheckoutService } from '../checkout.service';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { ISettlement } from '../../shared/models/settlements';
+import { IWarehouse } from '../../shared/models/warehouse';
 
 @Component({
   selector: 'app-checkout-address',
@@ -17,9 +18,14 @@ import { ISettlement } from '../../shared/models/settlements';
 export class CheckoutAddressComponent implements OnInit {
   @Input() checkoutForm: FormGroup;
   deliveryMethods: IDeliveryMethod[];
-  selectedValue = 1;
+
   settlements$: Observable<ISettlement[]>;
   private searchSettlement$ = new Subject<string>();
+  selectedSettlement: any;
+
+  warehouses$: Observable<IWarehouse[]>;
+  private searchWarehouse$ = new Subject<string>();
+  selectedWarehouse: any;
 
   constructor(
     private accountService: AccountService,
@@ -28,11 +34,39 @@ export class CheckoutAddressComponent implements OnInit {
     private basketService: BasketService
   ) {}
 
+  submitOrder(): void {
+    // const basket = this.basketService.getCurrentBasketValue();
+    // const orderToCreate = this.getOrderToCreate(basket);
+    // this.checkoutService.createOrder(orderToCreate).subscribe((order: IOrder) => {
+    //   this.toastr.success('Order created successfully');
+    //   this.basketService.deleteLocalBasket(basket.id);
+    //   const navigationExtras: NavigationExtras = {state: order};
+    //   this.router.navigate(['checkout/success'], navigationExtras);
+    // }, error => {
+    //   this.toastr.error(error.message);
+    //   console.log(error);
+    // });
+    console.log(this.checkoutForm.get('addressForm').get('deliveryCity').value);
+  }
+
   ngOnInit(): void {
     this.settlements$ = this.searchSettlement$.pipe(
-      debounceTime(500),
+      debounceTime(1000),
       distinctUntilChanged(),
-      switchMap((settlement) => this.checkoutService.getSettlements(settlement))
+      switchMap((settlement) => {
+        let idk = this.checkoutService.getSettlements(settlement);
+        console.log(idk);
+
+        return idk;
+      })
+    );
+
+    this.warehouses$ = this.searchWarehouse$.pipe(
+      debounceTime(1000),
+      distinctUntilChanged(),
+      switchMap((warehouse) => {
+        return this.checkoutService.getWarehouses(warehouse);
+      })
     );
 
     this.checkoutService.getDeliveryMethods().subscribe(
@@ -45,10 +79,26 @@ export class CheckoutAddressComponent implements OnInit {
     );
   }
 
+  searchFnUnique(term: string, item: any): any {
+    return item;
+  }
+
   getSettlements(settlement: string): void {
     if (settlement) {
+      console.log(settlement);
+
       this.searchSettlement$.next(settlement);
     }
+  }
+
+  getWarehouses(warehouse: string): void {
+    if (warehouse) {
+      this.searchWarehouse$.next(warehouse);
+    }
+  }
+
+  onWarehouseChange(selectedWarehouse: string) {
+    console.log(selectedWarehouse);
   }
 
   saveUserAddress(): void {

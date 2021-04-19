@@ -28,16 +28,6 @@
         </div> -->
 <div class="form-group" [formGroup]="checkoutForm">
   <div formGroupName="addressForm">
-    <!--    <ng-select
-      [items]="deliveryMethods"
-      bindLabel="shortName"
-      bindValue="id"
-      [searchable]="false"
-      [clearable]="false"
-      formControlName="deliveryMethod"
-      [(ngModel)]="selectedValue"
-    ></ng-select>-->
-
     <!-- <ng-select
       [items]="settlements$ | async"
       (keyup)="getSettlements(getValue($event.target))"
@@ -48,32 +38,63 @@
     ></ng-select> -->
 
     <app-custom-select
-      label="Спосіб доставки"
+      label="Місто доставки"
       [items]="settlements$ | async"
       (keyupEvent)="getSettlements(getValue($event))"
-      formControlName=""
+      (change)="getWarehouses(selectedSettlement)"
+      formControlName="deliveryCity"
     ></app-custom-select>
 
+    <app-custom-select
+      label="Відділення"
+      [items]="warehouses$ | async"
+      formControlName="warehouse"
+    ></app-custom-select>
+
+    <!-- <ng-select
+      [items]="settlements$ | async"
+      (keyup)="getSettlements(getValue($event.target))"
+      bindLabel="present"
+      bindValue="deliveryCity"
+      [placeholder]="'label'"
+      formControlName="deliveryCity"
+      (change)="getWarehouses(selectedSettlement)"
+      [searchFn]="searchFnUnique"
+      [(ngModel)]="selectedSettlement"
+    >
+      <ng-template ng-label-tmp let-item="item">
+        {{ item.present }} WOAH
+      </ng-template>
+    </ng-select>
+
+    <ng-select
+      [items]="warehouses$ | async"
+      bindLabel="description"
+      bindValue="ref"
+      [placeholder]="'label'"
+      formControlName="warehouse"
+      (change)="onWarehouseChange(selectedWarehouse)"
+      [searchFn]="searchFnUnique"
+      [(ngModel)]="selectedWarehouse"
+    ></ng-select> -->
+
+    <!-- <app-text-input label="Ім'я" formControlName="firstName"></app-text-input>
     <app-text-input
-      [label]="'Ім\'я'"
-      formControlName="firstName"
-    ></app-text-input>
-    <app-text-input
-      [label]="'Прізвище'"
+      label="Прізвище"
       formControlName="lastName"
     ></app-text-input>
     <app-text-input
-      [label]="'По-батькові'"
+      label="По-батькові"
       formControlName="surname"
     ></app-text-input>
     <app-text-input
-      [label]="'Номер телефону'"
-      formControlName="city"
-    ></app-text-input>
-    <!-- <app-text-input [label]="'State'" formControlName="state"></app-text-input>
-    <app-text-input
-      [label]="'Zip Code'"
-      formControlName="zipcode"
+      label="Номер телефону"
+      formControlName="phone"
+    ></app-text-input> -->
+
+    <!-- <app-text-input
+      label="Номер телефону"
+      formControlName="phone"
     ></app-text-input> -->
   </div>
 </div>
@@ -81,7 +102,7 @@
   <button class="btn" routerLink="/basket">
     <i class="fa fa-angle-left"></i> Back to Basket
   </button>
-  <button class="btn" cdkStepperNext>
+  <button class="btn" (click)="submitOrder()">
     Go to Delivery <i class="fa fa-angle-right"></i>
   </button>
 </div>

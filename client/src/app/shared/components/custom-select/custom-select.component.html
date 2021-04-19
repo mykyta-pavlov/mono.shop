@@ -1,4 +1,4 @@
-<div class="custom-select" [ngClass]="true ? 'checkout-select' : ''">
+<div class="custom-select checkout-select">
   <label class="select-label">{{ label }}</label>
   <ng-select
     [items]="items"
@@ -6,9 +6,71 @@
     bindLabel="present"
     bindValue="deliveryCity"
     [placeholder]="label"
-    [clearable]="true"
-    formControlName="deliveryMethod"
-    ngModel="selectedValue"
+    (change)="onChange(selectedValue)"
+    [(ngModel)]="selectedValue"
   ></ng-select>
   <span class="checkout-select__error">{{ label }} необхідно</span>
 </div>
+<!-- <ng-select
+  [items]="items"
+  (keyup)="keyup($event.target)"
+  bindLabel="present"
+  bindValue="deliveryCity"
+  [placeholder]="label"
+  formControlName="deliveryCity"
+  (change)="onChange(selectedValue)"
+  [(ngModel)]="selectedValue"
+  (ngModelChange)="idk($event)"
+  class="custom-select checkout-select"
+>
+   <ng-template
+    ng-option-tmp
+    let-item="item"
+    let-index="index"
+    let-search="searchTerm"
+  >
+    <div *ngIf="item.name === 'Kaunas'">{{ item.name }}</div>
+    <div style="margin: 10px 0" class="card" *ngIf="item.name !== 'Kaunas'">
+      <div class="card-body">
+        <h5 class="card-title" [ngOptionHighlight]="search">{{ item.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">
+          <img height="15" width="15" [src]="item.avatar" />
+          {{ item.present }}
+        </p>
+        <div *ngIf="item.name === 'Pavilnys'">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+  </ng-template> -->
+<!-- <ng-template
+    ng-optgroup-tmp
+    let-item="item"
+    let-item$="item$"
+    let-index="index"
+  >
+    <input
+      id="item-{{ index }}"
+      type="checkbox"
+      [(ngModel)]="selectedValue"
+      formControlName="userGroupParent"
+    />
+    {{ item.present | uppercase }}
+  </ng-template> -->
+<!-- <ng-template
+    ng-option-tmp
+    let-item="item"
+    let-item$="item$"
+    let-index="index"
+  >
+    <input
+      id="item-{{ index }}"
+      type="checkbox"
+      [(ngModel)]="selectedValue"
+      formControlName="userGroupChild"
+    />
+    {{ item.present }}
+  </ng-template>
+</ng-select>-->
