@@ -21,11 +21,9 @@ export class CheckoutAddressComponent implements OnInit {
 
   settlements$: Observable<ISettlement[]>;
   private searchSettlement$ = new Subject<string>();
-  selectedSettlement: any;
 
   warehouses$: Observable<IWarehouse[]>;
   private searchWarehouse$ = new Subject<string>();
-  selectedWarehouse: any;
 
   constructor(
     private accountService: AccountService,
@@ -54,10 +52,7 @@ export class CheckoutAddressComponent implements OnInit {
       debounceTime(1000),
       distinctUntilChanged(),
       switchMap((settlement) => {
-        let idk = this.checkoutService.getSettlements(settlement);
-        console.log(idk);
-
-        return idk;
+        return this.checkoutService.getSettlements(settlement);
       })
     );
 
@@ -79,10 +74,6 @@ export class CheckoutAddressComponent implements OnInit {
     );
   }
 
-  searchFnUnique(term: string, item: any): any {
-    return item;
-  }
-
   getSettlements(settlement: string): void {
     if (settlement) {
       console.log(settlement);
@@ -94,11 +85,8 @@ export class CheckoutAddressComponent implements OnInit {
   getWarehouses(warehouse: string): void {
     if (warehouse) {
       this.searchWarehouse$.next(warehouse);
+      console.log(this.warehouses$);
     }
-  }
-
-  onWarehouseChange(selectedWarehouse: string) {
-    console.log(selectedWarehouse);
   }
 
   saveUserAddress(): void {

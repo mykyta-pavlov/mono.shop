@@ -3,10 +3,10 @@
   <ng-select
     [items]="items"
     (keyup)="keyup($event.target)"
-    bindLabel="present"
-    bindValue="deliveryCity"
+    [bindLabel]="bindLabel"
+    [bindValue]="bindValue"
     [placeholder]="label"
-    (change)="onChange(selectedValue)"
+    (change)="onChange($event)"
     [(ngModel)]="selectedValue"
   ></ng-select>
   <span class="checkout-select__error">{{ label }} необхідно</span>

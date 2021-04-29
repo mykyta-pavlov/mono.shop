@@ -21,8 +21,11 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 export class CustomSelectComponent implements OnInit, ControlValueAccessor {
   @Input() label: string;
   @Input() items: Observable<any[]>;
+  @Input() bindLabel: Observable<any[]>;
+  @Input() bindValue: Observable<any[]>;
 
   @Output() keyupEvent = new EventEmitter();
+  @Output() changeEvent = new EventEmitter();
 
   selectedValue: any;
 
@@ -30,6 +33,7 @@ export class CustomSelectComponent implements OnInit, ControlValueAccessor {
     this.controlDir.valueAccessor = this;
   }
 
+  // #region ControlValueAccessor
   @ViewChild('select', { static: true }) input: ElementRef;
 
   writeValue(obj: any): void {
@@ -45,21 +49,16 @@ export class CustomSelectComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
   }
+  //#endregion
 
-  onChange(e: EventTarget) {
-    // this.selectedValue = 'idk';
-    console.log(e);
-    // console.log(this.items);
-    // console.log(this.selectedValue);
-  }
-
-  idk(val: any) {
-    console.log('val');
-    console.log(val);
+  onChange(target: EventTarget) {
+    this.changeEvent.emit(target);
   }
 
   keyup(target: EventTarget) {
     this.keyupEvent.emit(target);
+    console.log(this.items);
+    
   }
 
   ngOnInit(): void {}

@@ -41,13 +41,17 @@
       label="Місто доставки"
       [items]="settlements$ | async"
       (keyupEvent)="getSettlements(getValue($event))"
-      (change)="getWarehouses(selectedSettlement)"
+      (changeEvent)="getWarehouses($event.deliveryCity)"
+      bindLabel="present"
+      bindValue="deliveryCity"
       formControlName="deliveryCity"
     ></app-custom-select>
 
     <app-custom-select
       label="Відділення"
       [items]="warehouses$ | async"
+      bindLabel="description"
+      bindValue="ref"
       formControlName="warehouse"
     ></app-custom-select>
 
