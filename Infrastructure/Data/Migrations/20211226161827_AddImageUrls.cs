@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace Infrastructure.Data.Migrations
 {
-    public partial class UpdateOrderItemModel : Migration
+    public partial class AddImageUrls : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -15,8 +15,8 @@ namespace Core.Specifications
             )
         {
             AddInclude(x => x.ProductType);
-            AddInclude(q => q.Include(i => i.ImageUrls).ThenInclude(i => i.Product));
-            AddInclude(q => q.Include(i => i.ProductSizeQuantity).ThenInclude(i => i.Product));
+            AddInclude(q => q.Include(i => i.ImageUrls));
+            AddInclude(q => q.Include(i => i.ProductSizeQuantity));
 
             AddOrderBy(x => x.Name);
             ApplyPaging(productParams.PageSize * (productParams.PageIndex - 1), productParams.PageSize);
@@ -41,8 +41,8 @@ namespace Core.Specifications
         public ProductsWithTypesAndImagesSpecification(int id) : base(x => x.Id == id)
         {
             AddInclude(x => x.ProductType);
-            AddInclude(q => q.Include(i => i.ImageUrls).ThenInclude(i => i.Product));
-            AddInclude(q => q.Include(i => i.ProductSizeQuantity).ThenInclude(i => i.Product));
+            AddInclude(q => q.Include(i => i.ImageUrls));
+            AddInclude(q => q.Include(i => i.ProductSizeQuantity));
         }
     }
 }
