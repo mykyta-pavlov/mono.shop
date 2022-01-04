@@ -5,7 +5,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PagingHeaderComponent } from './components/paging-header/paging-header.component';
 import { PagerComponent } from './components/pager/pager.component';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { CdkStepperModule } from '@angular/cdk/stepper';
@@ -18,7 +18,17 @@ import { CustomSelectComponent } from './components/custom-select/custom-select.
 import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
-  declarations: [PagingHeaderComponent, PagerComponent, OrderTotalsComponent, TextInputComponent, StepperComponent, BasketSummaryComponent, NumberIncrementComponent, LogoComponent, CustomSelectComponent],
+  declarations: [
+    PagingHeaderComponent,
+    PagerComponent,
+    OrderTotalsComponent,
+    TextInputComponent,
+    StepperComponent,
+    BasketSummaryComponent,
+    NumberIncrementComponent,
+    LogoComponent,
+    CustomSelectComponent,
+  ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
@@ -28,6 +38,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     CdkStepperModule,
     RouterModule,
     NgSelectModule,
+    FormsModule,
   ],
   exports: [
     PaginationModule,
@@ -43,7 +54,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     BasketSummaryComponent,
     NumberIncrementComponent,
     LogoComponent,
-    CustomSelectComponent
-  ]
+    CustomSelectComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

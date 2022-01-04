@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Core.Entities.NovaPoshta;
 using Core.Interfaces;
+using System;
 
 namespace API.Controllers
 {
@@ -23,7 +24,8 @@ namespace API.Controllers
         [HttpGet("searchSettlements/{settlement}")]
         public async Task<ActionResult<List<SearchSettlementsResponse.Address>>> GetSettlements(string settlement)
         {
-            return await _npService.SearchSettlements(settlement);
+            var idk = await _npService.SearchSettlements(settlement);
+            return idk;
         }
 
         [HttpGet("warehouses/{cityRef}")]
