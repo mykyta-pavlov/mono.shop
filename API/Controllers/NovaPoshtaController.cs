@@ -1,14 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Core.Entities.NovaPoshta;
 using Core.Interfaces;
-using System;
 
 namespace API.Controllers
 {
@@ -24,8 +18,7 @@ namespace API.Controllers
         [HttpGet("searchSettlements/{settlement}")]
         public async Task<ActionResult<List<SearchSettlementsResponse.Address>>> GetSettlements(string settlement)
         {
-            var idk = await _npService.SearchSettlements(settlement);
-            return idk;
+            return await _npService.SearchSettlements(settlement);            
         }
 
         [HttpGet("warehouses/{cityRef}")]
