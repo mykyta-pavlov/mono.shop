@@ -63,6 +63,15 @@ namespace Infrastructure.Services
             return await _unitOfWork.Repository<DeliveryMethod>().ListAllAsync();
         }
 
+        public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsByTimeAsync(string time)
+        {
+            var deliveryMethods = await _unitOfWork.Repository<DeliveryMethod>().ListAllAsync();
+
+            return deliveryMethods
+                .Where(dm => string.Equals(dm.DeliveryTime, time, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
         public async Task<Order> GetOrderByIdAsync(int id, string buyerEmail)
         {
             var spec = new OrdersWithItemsAndOrderingSpecification(id, buyerEmail);
