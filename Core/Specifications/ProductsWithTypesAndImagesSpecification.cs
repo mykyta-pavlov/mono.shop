@@ -9,10 +9,7 @@ namespace Core.Specifications
     public class ProductsWithTypesAndImagesSpecification : BaseSpecification<Product>
     {
         public ProductsWithTypesAndImagesSpecification(ProductSpecParams productParams) 
-            : base(x =>
-                (string.IsNullOrEmpty(productParams.Search) || x.Name.ToLower().Contains(productParams.Search)) &&
-                (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId)
-            )
+            : base(ProductSpecificationFilters.ForProductSpecParams(productParams))
         {
             AddInclude(x => x.ProductType);
             AddInclude(q => q.Include(i => i.ImageUrls));
