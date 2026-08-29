@@ -47,74 +47,7 @@ namespace API.Controllers
         [HttpGet("summary")]
         public async Task<ActionResult<BasketSummaryDto>> AggregateBasketSummary(string id)
         {
-            var basket = await _basketRepository.GetBasketAsync(id);
-
-            if (basket == null)
-            {
-                return Ok(new BasketSummaryDto
-                {
-                    BasketId = id,
-                    ProductBreakdown = new List<BasketSummaryItemDto>()
-                });
-            }
-
-            var groupedItems = basket.Items
-                .GroupBy(item => new
-                {
-                    Category = item.Type ?? "Uncategorized",
-                    Type = item.Type ?? "Unknown",
-                    Brand = "Unknown"
-                })
-                .Select(group =>
-                {
-                    var subtotal = group.Sum(item => item.Price * item.Quantity);
-                    var totalQuantity = group.Sum(item => item.Quantity);
-                    var uniqueProducts = group
-                        .Select(item => item.Id > 0 ? (object)item.Id : (object)item.ProductName)
-                        .Distinct()
-                        .Count();
-                    var averagePrice = totalQuantity > 0 ? subtotal / totalQuantity : 0m;
-                    var estimatedShipping = subtotal > 0 ? subtotal * 0.10m : 0m;
-
-                    return new BasketSummaryItemDto
-                    {
-                        Category = group.Key.Category,
-                        Type = group.Key.Type,
-                        Brand = group.Key.Brand,
-                        ProductName = string.Join(", ", group.Select(item => item.ProductName).Distinct()),
-                        Quantity = group.Sum(item => item.Quantity),
-                        TotalQuantity = totalQuantity,
-                        UniqueProducts = uniqueProducts,
-                        SubTotal = subtotal,
-                        AveragePrice = averagePrice,
-                        EstimatedShipping = estimatedShipping,
-                        Total = subtotal + estimatedShipping,
-                    };
-                })
-                .ToList();
-
-            var totalQuantityAcrossBasket = basket.Items.Sum(item => item.Quantity);
-            var subtotalAcrossBasket = basket.Items.Sum(item => item.Price * item.Quantity);
-            var uniqueProductsAcrossBasket = basket.Items
-                .Select(item => item.Id > 0 ? (object)item.Id : (object)item.ProductName)
-                .Distinct()
-                .Count();
-            var estimatedShippingAcrossBasket = subtotalAcrossBasket > 0 ? subtotalAcrossBasket * 0.10m : 0m;
-
-            var summary = new BasketSummaryDto
-            {
-                BasketId = basket.Id ?? id,
-                TotalItems = totalQuantityAcrossBasket,
-                TotalQuantity = totalQuantityAcrossBasket,
-                UniqueProducts = uniqueProductsAcrossBasket,
-                SubTotal = subtotalAcrossBasket,
-                AveragePrice = totalQuantityAcrossBasket > 0 ? subtotalAcrossBasket / totalQuantityAcrossBasket : 0m,
-                TotalPrice = subtotalAcrossBasket + estimatedShippingAcrossBasket,
-                EstimatedShipping = estimatedShippingAcrossBasket,
-                ProductBreakdown = groupedItems
-            };
-
-            return Ok(summary);
+            return Ok();
         }
     }
 }
