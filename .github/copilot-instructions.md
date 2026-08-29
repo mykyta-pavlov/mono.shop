@@ -26,6 +26,7 @@
 3. Use Specifications (Core/Specifications) and SpecificationEvaluator (Infrastructure/Data/SpecificationEvaluator.cs) to encapsulate query filtering and paging; controllers should not construct EF queries.
 4. Mapping between domain models and external shapes must use AutoMapper profiles under API/Helpers/MappingProfiles.cs; controllers should accept/return DTOs (API/Dtos) only.
 5. Register dependencies in API Startup (Extensions/ApplicationServicesExtensions.cs). Do not new-up services or DbContexts inside controllers — rely on DI.
+6. For aggregate/complex endpoints (summaries, heavy calculations, transactional flows): implement the logic in a dedicated service (e.g., IBasketService/BasketService) in API or Infrastructure and expose a simple controller action that calls the service. Controllers must remain thin and refrain from performing grouping, heavy calculations, or multiple repository calls inline.
 
 ## Forbidden
 - Do NOT put filtering, calculations, or transactional business logic inside API/Controllers.
