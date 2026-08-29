@@ -1,4 +1,5 @@
 ﻿using API.Dtos;
+using API.Services;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -13,11 +14,13 @@ namespace API.Controllers
     {
         private readonly IBasketRepository _basketRepository;
         private readonly IMapper _mapper;
+        private readonly IBasketService _basketService;
 
-        public BasketController(IBasketRepository basketRepository, IMapper mapper)
+        public BasketController(IBasketRepository basketRepository, IMapper mapper, IBasketService basketService)
         {
             _basketRepository = basketRepository;
             _mapper = mapper;
+            _basketService = basketService;
         }
 
         [HttpGet]
@@ -47,7 +50,8 @@ namespace API.Controllers
         [HttpGet("summary")]
         public async Task<ActionResult<BasketSummaryDto>> AggregateBasketSummary(string id)
         {
-            return Ok();
+            var result = await _basketService.GetAggregateBasketSummary(id);
+            return Ok(result);
         }
     }
 }
