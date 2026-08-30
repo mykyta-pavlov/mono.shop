@@ -6,6 +6,8 @@ namespace API.Dtos
     {
         [Required]
         public string DisplayName { get; set; }
+
+        public int? Age { get; set; }
         
         [Required(ErrorMessage = "Електронна пошта є обов'язковим полем")]
         [EmailAddress]

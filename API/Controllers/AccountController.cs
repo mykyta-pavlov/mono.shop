@@ -104,6 +104,7 @@ namespace API.Controllers
             var user = new AppUser
             {
                 DisplayName = registerDto.DisplayName,
+                Age = registerDto.Age,
                 Email = registerDto.Email,
                 UserName = registerDto.Email
             };
