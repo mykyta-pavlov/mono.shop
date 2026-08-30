@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Core.Entities;
 
-namespace API.Dtos;
+namespace Core.Entities;
 
 public class BasketSummary
 {
