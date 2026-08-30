@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using Core.Entities;
 
 namespace API.Dtos;
 
-public class BasketSummaryDto
+public class BasketSummary
 {
     public string BasketId { get; set; }
     public int TotalItems { get; set; }
@@ -12,5 +13,5 @@ public class BasketSummaryDto
     public decimal AveragePrice { get; set; }
     public decimal TotalPrice { get; set; }
     public decimal EstimatedShipping { get; set; }
-    public List<BasketSummaryItemDto> ProductBreakdown { get; set; }
+    public List<BasketItem> ProductBreakdown { get; set; }
 }
